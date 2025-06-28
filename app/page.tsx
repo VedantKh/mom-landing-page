@@ -4,12 +4,21 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   BookOpen,
-  GraduationCap,
   MessageSquare,
   Star,
   Heart,
   Users,
   Award,
+  House,
+  Monitor,
+  Calculator,
+  Microscope,
+  Book,
+  CheckCircle,
+  Mail,
+  Clock,
+  Video,
+  FileText,
 } from "lucide-react";
 
 export default function Home() {
@@ -23,7 +32,7 @@ export default function Home() {
                 className="text-2xl font-light italic text-amber-700"
                 style={{ fontFamily: "serif" }}
               >
-                Shivani's
+                Shivani&apos;s
               </span>
               <span className="text-xl font-bold tracking-wide text-amber-900 -mt-1">
                 TUTORING
@@ -54,7 +63,7 @@ export default function Home() {
               href="#contact"
               className="text-sm hover:text-amber-600 transition-colors"
             >
-              Let's Chat
+              Let&apos;s Chat
             </Link>
           </nav>
           <Button className="bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-full px-6 font-medium">
@@ -77,18 +86,19 @@ export default function Home() {
                   Personal Learning Journey • Grades K-8
                 </div>
                 <h1 className="text-4xl font-light leading-tight sm:text-5xl md:text-6xl lg:text-7xl text-amber-900">
-                   Making your child's potential
+                  Making your child&apos;s potential
                   <span
                     className="block italic font-light text-amber-700"
                     style={{ fontFamily: "serif" }}
                   >
-                   bloom
+                    bloom
                   </span>
                 </h1>
                 <p className="max-w-[600px] text-amber-800 text-lg md:text-xl leading-relaxed">
-                  I'm Shivani, and I love teaching children. As a mother myself, I understand 
-                  the hopes and dreams parents have for their little ones, and love joining 
-                  each family on their journey to get there.
+                  I&apos;m Shivani, and I love teaching children. As a mother
+                  myself, I understand the hopes and dreams parents have for
+                  their little ones, and love joining each family on their
+                  journey to get there.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-full px-8 py-3 text-lg font-medium">
@@ -111,7 +121,7 @@ export default function Home() {
                   <div className="flex items-center gap-2">
                     <Users className="h-5 w-5 text-amber-600" />
                     <span className="text-sm text-amber-700">
-                      Tailored to your child's needs
+                      Tailored to your child&apos;s needs
                     </span>
                   </div>
                 </div>
@@ -176,7 +186,7 @@ export default function Home() {
                   A Little About Me
                 </div>
                 <h2 className="text-3xl font-light sm:text-4xl text-amber-900 leading-tight">
-                  Hi, I'm
+                  Hi, I&apos;m
                   <span
                     className="italic font-light text-amber-700 block"
                     style={{ fontFamily: "serif" }}
@@ -188,15 +198,15 @@ export default function Home() {
 
                 <div className="space-y-4 text-amber-800 leading-relaxed">
                   <p className="text-lg">
-                    Teaching isn't just my profession—it's my calling. For the
-                    past 15 years, I've been blessed to guide young learners on
-                    their educational journey, and each day brings new joy as I
-                    watch their confidence blossom.
+                    Teaching isn&apos;t just my profession—it&apos;s my calling.
+                    For the past 15 years, I&apos;ve been blessed to guide young
+                    learners on their educational journey, and each day brings
+                    new joy as I watch their confidence blossom.
                   </p>
                   <p>
                     My approach is simple: every child is unique, brilliant, and
                     deserving of an education that honors their individual
-                    learning style. Whether we're exploring the wonders of
+                    learning style. Whether we&apos;re exploring the wonders of
                     mathematics, diving into exciting scientific discoveries, or
                     crafting beautiful stories together, I believe learning
                     should feel nurturing and empowering.
@@ -204,8 +214,8 @@ export default function Home() {
                   <p>
                     As a mother myself, I understand the hopes and dreams
                     parents have for their children. My goal is to be a partner
-                    in your child's success—creating a warm, supportive space
-                    where they can truly thrive.
+                    in your child&apos;s success—creating a warm, supportive
+                    space where they can truly thrive.
                   </p>
                 </div>
 
@@ -251,7 +261,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-amber-800 mb-8 italic text-lg leading-relaxed">
-                    "{testimonial.content}"
+                    &quot;{testimonial.content}&quot;
                   </p>
                   <div className="flex items-center gap-4 mt-auto border-t border-amber-200 pt-6">
                     <div className="rounded-full bg-amber-200 h-12 w-12 flex items-center justify-center">
@@ -295,8 +305,8 @@ export default function Home() {
               </h2>
               <p className="max-w-2xl text-amber-700 text-lg leading-relaxed">
                 Every child learns differently, and I celebrate those
-                differences. Here's how we'll create magic together in Math,
-                Science, and English.
+                differences. Here&apos;s how we&apos;ll create magic together in
+                Math, Science, and English.
               </p>
               <div className="w-20 h-0.5 bg-amber-600"></div>
             </div>
@@ -305,9 +315,7 @@ export default function Home() {
               <Card className="bg-white border-2 border-amber-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden rounded-3xl">
                 <CardContent className="p-8">
                   <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100">
-                    <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center">
-                      <div className="w-4 h-4 bg-amber-100 rounded-full"></div>
-                    </div>
+                    <Calculator className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="text-xl font-semibold text-amber-900 mb-4">
                     Mathematics with Wonder
@@ -319,21 +327,15 @@ export default function Home() {
                   </p>
                   <ul className="space-y-3 text-amber-700">
                     <li className="flex items-start gap-3">
-                      <div className="rounded-full bg-amber-100 p-1 mt-1">
-                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                      </div>
+                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
                       <span>Visual storytelling with numbers</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="rounded-full bg-amber-100 p-1 mt-1">
-                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                      </div>
+                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
                       <span>Real-world connections that spark curiosity</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="rounded-full bg-amber-100 p-1 mt-1">
-                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                      </div>
+                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
                       <span>Confidence-building through gentle challenge</span>
                     </li>
                   </ul>
@@ -343,9 +345,7 @@ export default function Home() {
               <Card className="bg-white border-2 border-amber-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden rounded-3xl">
                 <CardContent className="p-8">
                   <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100">
-                    <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center">
-                      <div className="w-3 h-6 bg-amber-100 rounded-full"></div>
-                    </div>
+                    <Microscope className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="text-xl font-semibold text-amber-900 mb-4">
                     Science as Discovery
@@ -357,22 +357,18 @@ export default function Home() {
                   </p>
                   <ul className="space-y-3 text-amber-700">
                     <li className="flex items-start gap-3">
-                      <div className="rounded-full bg-amber-100 p-1 mt-1">
-                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                      </div>
+                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
                       <span>Hands-on experiments that amaze</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="rounded-full bg-amber-100 p-1 mt-1">
-                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                      </div>
+                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
                       <span>Nature-connected learning</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="rounded-full bg-amber-100 p-1 mt-1">
-                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                      </div>
-                      <span>Questions that lead to "aha!" moments</span>
+                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
+                      <span>
+                        Questions that lead to &quot;aha!&quot; moments
+                      </span>
                     </li>
                   </ul>
                 </CardContent>
@@ -381,35 +377,30 @@ export default function Home() {
               <Card className="bg-white border-2 border-amber-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden rounded-3xl">
                 <CardContent className="p-8">
                   <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100">
-                    <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center">
-                      <div className="w-4 h-2 bg-amber-100 rounded-full"></div>
-                    </div>
+                    <Book className="h-8 w-8 text-amber-700" />
                   </div>
                   <h3 className="text-xl font-semibold text-amber-900 mb-4">
                     English as Expression
                   </h3>
                   <p className="text-amber-700 mb-6 leading-relaxed">
                     Words are magic, and every child has their own voice waiting
-                    to be heard. We'll unlock the power of language together.
+                    to be heard. We&apos;ll unlock the power of language
+                    together.
                   </p>
                   <ul className="space-y-3 text-amber-700">
                     <li className="flex items-start gap-3">
-                      <div className="rounded-full bg-amber-100 p-1 mt-1">
-                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                      </div>
+                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
                       <span>Stories that come alive</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="rounded-full bg-amber-100 p-1 mt-1">
-                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                      </div>
+                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
                       <span>Writing that flows from the heart</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="rounded-full bg-amber-100 p-1 mt-1">
-                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                      </div>
-                      <span>Reading adventures we'll treasure together</span>
+                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
+                      <span>
+                        Reading adventures we&apos;ll treasure together
+                      </span>
                     </li>
                   </ul>
                 </CardContent>
@@ -420,7 +411,7 @@ export default function Home() {
             <div className="mt-20 pt-16 border-t border-amber-200">
               <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
                 <h3 className="text-2xl font-light sm:text-3xl text-amber-900">
-                  How we'll
+                  How we&apos;ll{" "}
                   <span
                     className="italic font-light text-amber-700"
                     style={{ fontFamily: "serif" }}
@@ -430,7 +421,7 @@ export default function Home() {
                 </h3>
                 <p className="max-w-2xl text-amber-700 leading-relaxed">
                   Whether in the comfort of your home or through our virtual
-                  classroom, every session is designed around your child's
+                  classroom, every session is designed around your child&apos;s
                   unique needs.
                 </p>
               </div>
@@ -442,24 +433,22 @@ export default function Home() {
                   </div>
                   <CardContent className="p-8">
                     <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100">
-                      <div className="w-8 h-8 bg-amber-600 rounded-lg flex items-center justify-center">
-                        <div className="w-4 h-4 bg-amber-100 rounded-sm"></div>
-                      </div>
+                      <House className="h-8 w-8 text-amber-700" />
                     </div>
                     <h4 className="text-xl font-semibold text-amber-900 mb-4">
                       In Your Home
                     </h4>
                     <p className="text-amber-700 mb-6 leading-relaxed">
-                      There's something magical about learning in a familiar
-                      space. I come to you, bringing warmth, patience, and all
-                      the tools we need to make learning wonderful.
+                      There&apos;s something magical about learning in a
+                      familiar space. I come to you, bringing warmth, patience,
+                      and all the tools we need to make learning wonderful.
                     </p>
                     <div className="space-y-3 text-amber-700">
                       <div className="flex items-start gap-3">
                         <Heart className="h-5 w-5 text-amber-600 mt-0.5 fill-amber-600" />
                         <span>
-                          <strong>Personal connection</strong> in your child's
-                          comfort zone
+                          <strong>Personal connection</strong> in your
+                          child&apos;s comfort zone
                         </span>
                       </div>
                       <div className="flex items-start gap-3">
@@ -481,9 +470,7 @@ export default function Home() {
                 <Card className="bg-white border-2 border-amber-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden rounded-3xl">
                   <CardContent className="p-8">
                     <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100">
-                      <div className="w-8 h-8 bg-amber-600 rounded-lg flex items-center justify-center">
-                        <div className="w-3 h-3 bg-amber-100 rounded-full"></div>
-                      </div>
+                      <Monitor className="h-8 w-8 text-amber-700" />
                     </div>
                     <h4 className="text-xl font-semibold text-amber-900 mb-4">
                       Virtual Classroom
@@ -495,26 +482,20 @@ export default function Home() {
                     </p>
                     <div className="space-y-3 text-amber-700">
                       <div className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-amber-200 mt-0.5 flex items-center justify-center">
-                          <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                        </div>
+                        <Clock className="h-5 w-5 text-amber-600 mt-0.5" />
                         <span>
                           <strong>Flexible scheduling</strong> for busy families
                         </span>
                       </div>
                       <div className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-amber-200 mt-0.5 flex items-center justify-center">
-                          <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                        </div>
+                        <Video className="h-5 w-5 text-amber-600 mt-0.5" />
                         <span>
                           <strong>Interactive tools</strong> that make learning
                           fun
                         </span>
                       </div>
                       <div className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-amber-200 mt-0.5 flex items-center justify-center">
-                          <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                        </div>
+                        <FileText className="h-5 w-5 text-amber-600 mt-0.5" />
                         <span>
                           <strong>Recordings available</strong> for review and
                           reinforcement
@@ -537,10 +518,10 @@ export default function Home() {
             <div className="grid gap-12 lg:grid-cols-2 items-center max-w-6xl mx-auto">
               <div className="space-y-8">
                 <div className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-medium border border-amber-200">
-                  Let's Begin This Journey
+                  Let&apos;s Begin This Journey
                 </div>
                 <h2 className="text-3xl font-light sm:text-4xl text-amber-900 leading-tight">
-                  Ready to discover your child's
+                  Ready to discover your child&apos;s
                   <span
                     className="italic font-light text-amber-700 block"
                     style={{ fontFamily: "serif" }}
@@ -550,9 +531,9 @@ export default function Home() {
                 </h2>
                 <div className="w-20 h-0.5 bg-amber-600"></div>
                 <p className="text-amber-800 text-lg leading-relaxed">
-                  I'd love to meet you and your child. Let's have a warm
-                  conversation about their dreams, interests, and how we can
-                  make learning an adventure they'll cherish.
+                  I&apos;d love to meet you and your child. Let&apos;s have a
+                  conversation about their interests and how we can make
+                  learning a process they&apos;ll cherish.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
@@ -560,15 +541,15 @@ export default function Home() {
                       <MessageSquare className="h-6 w-6 text-amber-700" />
                     </div>
                     <div>
-                      <p className="font-medium text-amber-900">Let's Chat</p>
-                      <p className="text-amber-700">(555) 123-4567</p>
+                      <p className="font-medium text-amber-900">
+                        Let&apos;s Chat
+                      </p>
+                      <p className="text-amber-700">(+971) 50 596 4988</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100">
-                      <div className="w-6 h-6 bg-amber-600 rounded-full flex items-center justify-center">
-                        <div className="w-3 h-3 bg-amber-100 rounded-full"></div>
-                      </div>
+                      <Mail className="h-6 w-6 text-amber-700" />
                     </div>
                     <div>
                       <p className="font-medium text-amber-900">Write to Me</p>
@@ -604,7 +585,7 @@ export default function Home() {
                         htmlFor="child-name"
                         className="text-sm font-medium text-amber-800"
                       >
-                        Your child's name
+                        Your child&apos;s name
                       </label>
                       <input
                         id="child-name"
@@ -666,7 +647,7 @@ export default function Home() {
                     />
                   </div>
                   <Button className="w-full bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-2xl h-12 text-lg font-medium">
-                    Let's Start This Beautiful Journey
+                    Let&apos;s Start This Beautiful Journey
                   </Button>
                 </div>
               </div>
@@ -683,13 +664,13 @@ export default function Home() {
                 className="text-lg italic text-amber-700"
                 style={{ fontFamily: "serif" }}
               >
-                Shivani's
+                Shivani&apos;s
               </span>
               <span className="text-sm font-bold text-amber-900">TUTORING</span>
             </div>
             <p className="text-center text-sm text-amber-700 md:text-left">
-              © {new Date().getFullYear()} • Made with love for every child's
-              journey
+              © {new Date().getFullYear()} • Made with love for every
+              child&apos;s journey
             </p>
           </div>
           <div className="flex items-center gap-6">
