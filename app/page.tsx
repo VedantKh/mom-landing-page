@@ -127,7 +127,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="relative">
-                <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl border-4 border-cream-100">
+                <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
                   <div className="absolute inset-0 bg-gradient-to-tr from-amber-600/10 to-transparent z-10"></div>
                   <Image
                     src="/assets/hero.png"
@@ -522,7 +522,7 @@ export default function Home() {
               </div>
 
               <div className="relative">
-                <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl border-4 border-cream-100">
+                <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl">
                   <div className="absolute inset-0 bg-gradient-to-tr from-amber-600/10 to-transparent z-10"></div>
                   <Image
                     src="/assets/contact.png"
