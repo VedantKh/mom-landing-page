@@ -204,7 +204,6 @@ export default function Home() {
                     space where they can truly thrive.
                   </p>
                 </div>
-
               </div>
             </div>
           </div>
@@ -306,11 +305,6 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-amber-900 mb-4">
                     Mathematics with Wonder
                   </h3>
-                  <p className="text-amber-700 mb-6 leading-relaxed">
-                    We turn numbers into stories and problems into adventures.
-                    Math becomes a beautiful language your child will love to
-                    speak.
-                  </p>
                   <ul className="space-y-3 text-amber-700">
                     <li className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
@@ -336,11 +330,6 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-amber-900 mb-4">
                     Science as Discovery
                   </h3>
-                  <p className="text-amber-700 mb-6 leading-relaxed">
-                    Every question is a doorway to wonder. We explore the
-                    natural world with curiosity and joy, making science feel
-                    like the greatest adventure.
-                  </p>
                   <ul className="space-y-3 text-amber-700">
                     <li className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
@@ -368,11 +357,6 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-amber-900 mb-4">
                     English as Expression
                   </h3>
-                  <p className="text-amber-700 mb-6 leading-relaxed">
-                    Words are magic, and every child has their own voice waiting
-                    to be heard. We&apos;ll unlock the power of language
-                    together.
-                  </p>
                   <ul className="space-y-3 text-amber-700">
                     <li className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
@@ -424,11 +408,6 @@ export default function Home() {
                     <h4 className="text-xl font-semibold text-amber-900 mb-4">
                       In Your Home
                     </h4>
-                    <p className="text-amber-700 mb-6 leading-relaxed">
-                      There&apos;s something magical about learning in a
-                      familiar space. I come to you, bringing warmth, patience,
-                      and all the tools we need to make learning wonderful.
-                    </p>
                     <div className="space-y-3 text-amber-700">
                       <div className="flex items-start gap-3">
                         <Heart className="h-5 w-5 text-amber-600 mt-0.5 fill-amber-600" />
@@ -461,11 +440,6 @@ export default function Home() {
                     <h4 className="text-xl font-semibold text-amber-900 mb-4">
                       Virtual Classroom
                     </h4>
-                    <p className="text-amber-700 mb-6 leading-relaxed">
-                      When distance is a factor, we create our own cozy learning
-                      space online. Same warmth, same personal attention, just
-                      through a screen.
-                    </p>
                     <div className="space-y-3 text-amber-700">
                       <div className="flex items-start gap-3">
                         <Clock className="h-5 w-5 text-amber-600 mt-0.5" />
@@ -547,94 +521,15 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-white p-8 rounded-3xl shadow-xl border-2 border-amber-100">
-                <h3 className="text-xl font-semibold text-amber-900 mb-6">
-                  Start with a Friendly Chat
-                </h3>
-                <div className="grid gap-6">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="parent-name"
-                        className="text-sm font-medium text-amber-800"
-                      >
-                        Your name
-                      </label>
-                      <input
-                        id="parent-name"
-                        className="flex h-12 w-full rounded-2xl border-2 border-amber-200 bg-cream-50 px-4 py-3 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:border-amber-400"
-                        placeholder="Tell me your name"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="child-name"
-                        className="text-sm font-medium text-amber-800"
-                      >
-                        Your child&apos;s name
-                      </label>
-                      <input
-                        id="child-name"
-                        className="flex h-12 w-full rounded-2xl border-2 border-amber-200 bg-cream-50 px-4 py-3 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:border-amber-400"
-                        placeholder="Your wonderful child"
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="email"
-                      className="text-sm font-medium text-amber-800"
-                    >
-                      Email
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      className="flex h-12 w-full rounded-2xl border-2 border-amber-200 bg-cream-50 px-4 py-3 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:border-amber-400"
-                      placeholder="How can I reach you?"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="child-grade"
-                      className="text-sm font-medium text-amber-800"
-                    >
-                      What grade is your child in?
-                    </label>
-                    <select
-                      id="child-grade"
-                      className="flex h-12 w-full rounded-2xl border-2 border-amber-200 bg-cream-50 px-4 py-3 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:border-amber-400"
-                    >
-                      <option value="" disabled selected>
-                        Select their grade
-                      </option>
-                      <option value="K">Kindergarten</option>
-                      <option value="1">Grade 1</option>
-                      <option value="2">Grade 2</option>
-                      <option value="3">Grade 3</option>
-                      <option value="4">Grade 4</option>
-                      <option value="5">Grade 5</option>
-                      <option value="6">Grade 6</option>
-                      <option value="7">Grade 7</option>
-                      <option value="8">Grade 8</option>
-                    </select>
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="message"
-                      className="text-sm font-medium text-amber-800"
-                    >
-                      Tell me about your child
-                    </label>
-                    <textarea
-                      id="message"
-                      className="flex min-h-[120px] w-full rounded-2xl border-2 border-amber-200 bg-cream-50 px-4 py-3 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:border-amber-400"
-                      placeholder="What makes your child special? What are their interests, dreams, or any learning goals you have in mind?"
-                    />
-                  </div>
-                  <Button className="w-full bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-2xl h-12 text-lg font-medium">
-                    Let&apos;s Start This Beautiful Journey
-                  </Button>
+              <div className="relative">
+                <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl border-4 border-cream-100">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-amber-600/10 to-transparent z-10"></div>
+                  <Image
+                    src="/assets/contact.png"
+                    alt="Free consultation with Shivani - A warm conversation about your child's learning journey"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
