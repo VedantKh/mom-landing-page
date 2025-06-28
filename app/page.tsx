@@ -11,11 +11,11 @@ export default function Home() {
         <div className="container max-w-7xl mx-auto flex h-16 items-center justify-between py-4 px-4 md:px-6">
           <div className="flex items-center gap-2">
             <GraduationCap className="h-6 w-6 text-purple-600" />
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-400">
+            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-700">
               Khanna Tutoring
             </span>
           </div>
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6 text-gray-800">
             <Link
               href="#services"
               className="text-sm font-medium hover:text-purple-600 transition-colors"
@@ -94,6 +94,75 @@ export default function Home() {
           </div>
         </section>
 
+                {/* About Section */}
+                <section
+          id="about"
+          className="w-full py-12 md:py-24 lg:py-32 bg-white relative"
+        >
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-72 h-72 bg-purple-100 rounded-full opacity-30 translate-x-1/3 -translate-y-1/3"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-100 rounded-full opacity-30 -translate-x-1/3 translate-y-1/3"></div>
+
+          <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
+            <div className="grid gap-10 lg:grid-cols-2 items-center max-w-6xl mx-auto">
+              <div className="relative">
+                <div className="absolute -top-6 -left-6 w-24 h-24 bg-purple-200 rounded-full opacity-50"></div>
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-200 rounded-full opacity-50"></div>
+                <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl border border-purple-100">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent z-10"></div>
+                  <Image
+                    src="/placeholder.svg?height=400&width=400"
+                    alt="Shivani Khanna teaching"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              <div className="space-y-6">
+                <div className="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium">
+                  Meet Your Tutor
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-purple-800">
+                  Shivani Khanna
+                </h2>
+                <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full"></div>
+                <p className="text-slate-700 text-lg">
+                  With over 15 years of teaching experience, Shivani Khanna has
+                  a passion for helping children discover their potential. Her
+                  patient and nurturing approach creates a comfortable learning
+                  environment where students can thrive.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
+                      <BookOpen className="h-5 w-5 text-purple-600" />
+                    </div>
+                    <span className="text-slate-700">
+                      Certified Elementary Education Teacher
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
+                      <GraduationCap className="h-5 w-5 text-purple-600" />
+                    </div>
+                    <span className="text-slate-700">
+                      Worked at British Council for 10 years
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
+                      <MessageSquare className="h-5 w-5 text-purple-600" />
+                    </div>
+                    <span className="text-slate-700">
+                      Specialized in working with diverse learning styles
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Testimonials Section - Moved right under hero */}
         <section
           id="testimonials"
@@ -111,7 +180,7 @@ export default function Home() {
                 Success Stories
               </div>
               <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-purple-800">
-                What Parents Are Saying
+                What People Say About Shivani
               </h2>
               <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full mx-auto"></div>
             </div>
@@ -673,74 +742,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* About Section */}
-        <section
-          id="about"
-          className="w-full py-12 md:py-24 lg:py-32 bg-white relative"
-        >
-          {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-72 h-72 bg-purple-100 rounded-full opacity-30 translate-x-1/3 -translate-y-1/3"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-100 rounded-full opacity-30 -translate-x-1/3 translate-y-1/3"></div>
-
-          <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
-            <div className="grid gap-10 lg:grid-cols-2 items-center max-w-6xl mx-auto">
-              <div className="relative">
-                <div className="absolute -top-6 -left-6 w-24 h-24 bg-purple-200 rounded-full opacity-50"></div>
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-200 rounded-full opacity-50"></div>
-                <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl border border-purple-100">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent z-10"></div>
-                  <Image
-                    src="/placeholder.svg?height=400&width=400"
-                    alt="Shivani Khanna teaching"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-              <div className="space-y-6">
-                <div className="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium">
-                  Meet Your Tutor
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-purple-800">
-                  Shivani Khanna
-                </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full"></div>
-                <p className="text-slate-700 text-lg">
-                  With over 15 years of teaching experience, Shivani Khanna has
-                  a passion for helping children discover their potential. Her
-                  patient and nurturing approach creates a comfortable learning
-                  environment where students can thrive.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
-                      <BookOpen className="h-5 w-5 text-purple-600" />
-                    </div>
-                    <span className="text-slate-700">
-                      Certified Elementary Education Teacher
-                    </span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
-                      <GraduationCap className="h-5 w-5 text-purple-600" />
-                    </div>
-                    <span className="text-slate-700">
-                      Master's Degree in Education
-                    </span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
-                      <MessageSquare className="h-5 w-5 text-purple-600" />
-                    </div>
-                    <span className="text-slate-700">
-                      Specialized in working with diverse learning styles
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Contact Section */}
         <section
@@ -972,18 +973,18 @@ const testimonials = [
     name: "Sarah Thompson",
     relation: "Parent of 3rd grader",
     content:
-      "Shivani Khanna has been a blessing for our family. My son struggled with math anxiety, but after just a few sessions, he's approaching problems with confidence. Her patience and teaching methods are exceptional.",
+      "Shivani has been a blessing for our family. My son struggled with math anxiety, but after just a few sessions, he's approaching problems with confidence. Her patience and teaching methods are exceptional.",
   },
   {
     name: "Michael Rodriguez",
     relation: "Parent of 6th grader",
     content:
-      "Our daughter's science grades have improved dramatically since working with Shivani Khanna. She makes complex concepts easy to understand and keeps learning fun and engaging.",
+      "Our daughter's science grades have improved dramatically since working with Shivani. She makes complex concepts easy to understand and keeps learning fun and engaging.",
   },
   {
-    name: "Jennifer Williams",
-    relation: "Parent of 4th and 7th graders",
+    name: "Vedant Khanna",
+    relation: "Son of Shivani Khanna",
     content:
-      "Both my children have benefited from Shivani Khanna's tutoring. She adapts her teaching style to each child's needs. Their reading comprehension and writing skills have improved significantly.",
+      "I have been a student of Shivani Khanna for 18 years. She has been the best teacher I have ever had because no one else cares as much about her students as she does. I am now studying Math at Stanford University.",
   },
 ];
