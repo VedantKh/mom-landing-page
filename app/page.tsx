@@ -2,217 +2,268 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BookOpen, GraduationCap, MessageSquare, Star } from "lucide-react";
+import {
+  BookOpen,
+  GraduationCap,
+  MessageSquare,
+  Star,
+  Heart,
+  Users,
+  Award,
+} from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-b from-purple-50 to-white">
-      <header className="sticky top-0 z-40 border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="container max-w-7xl mx-auto flex h-16 items-center justify-between py-4 px-4 md:px-6">
-          <div className="flex items-center gap-2">
-            <GraduationCap className="h-6 w-6 text-purple-600" />
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-700">
-              Khanna Tutoring
-            </span>
+    <div className="flex min-h-screen flex-col bg-gradient-to-b from-amber-50 via-cream-50 to-amber-50">
+      <header className="sticky top-0 z-40 border-b border-amber-200 bg-cream-50/95 backdrop-blur supports-[backdrop-filter]:bg-cream-50/90">
+        <div className="container max-w-7xl mx-auto flex h-20 items-center justify-between py-4 px-4 md:px-6">
+          <div className="flex items-center gap-3">
+            <div className="flex flex-col items-center">
+              <span
+                className="text-2xl font-light italic text-amber-700"
+                style={{ fontFamily: "serif" }}
+              >
+                Shivani's
+              </span>
+              <span className="text-xl font-bold tracking-wide text-amber-900 -mt-1">
+                TUTORING
+              </span>
+              <div className="w-16 h-px bg-amber-600 mt-1"></div>
+            </div>
           </div>
-          <nav className="hidden md:flex items-center gap-6 text-gray-800">
-            <Link
-              href="#services"
-              className="text-sm font-medium hover:text-purple-600 transition-colors"
-            >
-              Services
-            </Link>
+          <nav className="hidden md:flex items-center gap-8 text-amber-800 font-medium">
             <Link
               href="#about"
-              className="text-sm font-medium hover:text-purple-600 transition-colors"
+              className="text-sm hover:text-amber-600 transition-colors"
             >
-              About
+              Meet Shivani
+            </Link>
+            <Link
+              href="#approach"
+              className="text-sm hover:text-amber-600 transition-colors"
+            >
+              My Approach
             </Link>
             <Link
               href="#testimonials"
-              className="text-sm font-medium hover:text-purple-600 transition-colors"
+              className="text-sm hover:text-amber-600 transition-colors"
             >
-              Testimonials
+              Kind Words
             </Link>
             <Link
               href="#contact"
-              className="text-sm font-medium hover:text-purple-600 transition-colors"
+              className="text-sm hover:text-amber-600 transition-colors"
             >
-              Contact
+              Let's Chat
             </Link>
           </nav>
-          <Button className="bg-purple-600 hover:bg-purple-700">
-            Book a Session
+          <Button className="bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-full px-6 font-medium">
+            Book a Chat
           </Button>
         </div>
       </header>
+
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
-          {/* Decorative elements */}
-          <div className="absolute top-0 left-0 w-64 h-64 bg-purple-200 rounded-full opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 rounded-full opacity-20 translate-x-1/3 translate-y-1/3"></div>
+        <section className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-b from-amber-50 to-cream-100">
+          {/* Subtle decorative elements */}
+          <div className="absolute top-1/4 left-0 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl -translate-x-1/2"></div>
+          <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-amber-300/20 rounded-full blur-3xl translate-x-1/2"></div>
 
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-              <div className="space-y-6">
-                <div className="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-2">
-                  Grades K-8 Tutoring
+            <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+              <div className="space-y-8">
+                <div className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-medium border border-amber-200">
+                  Personal Learning Journey • Grades K-8
                 </div>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500">
-                  Inspiring Young Minds to Excel
+                <h1 className="text-4xl font-light leading-tight sm:text-5xl md:text-6xl lg:text-7xl text-amber-900">
+                   Making your child's potential
+                  <span
+                    className="block italic font-light text-amber-700"
+                    style={{ fontFamily: "serif" }}
+                  >
+                   bloom
+                  </span>
                 </h1>
-                <p className="max-w-[600px] text-slate-700 md:text-xl">
-                  Personalized tutoring in Math, Science, and English for
-                  students up to Grade 8. Available both online and in-person,
-                  with in-person sessions recommended for optimal engagement and
-                  learning outcomes.
+                <p className="max-w-[600px] text-amber-800 text-lg md:text-xl leading-relaxed">
+                  I'm Shivani, and I love teaching children. As a mother myself, I understand 
+                  the hopes and dreams parents have for their little ones, and love joining 
+                  each family on their journey to get there.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-purple-600 hover:bg-purple-700 rounded-full px-6">
-                    Schedule a Free Consultation
+                  <Button className="bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-full px-8 py-3 text-lg font-medium">
+                    Start Our Journey Together
                   </Button>
                   <Button
                     variant="outline"
-                    className="border-purple-300 text-purple-700 hover:bg-purple-50 bg-transparent rounded-full px-6"
+                    className="border-2 border-amber-300 text-amber-700 hover:bg-amber-50 bg-transparent rounded-full px-8 py-3 text-lg font-medium"
                   >
-                    Learn More
+                    Learn About My Story
                   </Button>
                 </div>
+                <div className="flex items-center gap-6 pt-4 pl-2">
+                  <div className="flex items-center gap-2">
+                    <Heart className="h-5 w-5 text-amber-600 fill-amber-600" />
+                    <span className="text-sm text-amber-700">
+                      15+ Years of Love & Learning
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Users className="h-5 w-5 text-amber-600" />
+                    <span className="text-sm text-amber-700">
+                      Tailored to your child's needs
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div className="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent z-10"></div>
-                <Image
-                  src="/placeholder.svg?height=500&width=500"
-                  alt="Happy students learning"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+              <div className="relative">
+                <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl border-4 border-cream-100">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-amber-600/10 to-transparent z-10"></div>
+                  <Image
+                    src="/placeholder.svg?height=600&width=500"
+                    alt="Shivani teaching with warmth and care"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                {/* Floating elements */}
+                <div className="absolute -top-4 -right-4 bg-cream-50 p-4 rounded-2xl shadow-lg border border-amber-100">
+                  <div className="flex items-center gap-2">
+                    <Star className="h-4 w-4 text-amber-500 fill-amber-500" />
+                    <span className="text-sm font-medium text-amber-800">
+                      Trusted by families
+                    </span>
+                  </div>
+                </div>
+                <div className="absolute -bottom-4 -left-4 bg-cream-50 p-4 rounded-2xl shadow-lg border border-amber-100">
+                  <div className="text-sm font-medium text-amber-800">
+                    British Council Certified
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-                {/* About Section */}
-                <section
+        {/* About Section */}
+        <section
           id="about"
-          className="w-full py-12 md:py-24 lg:py-32 bg-white relative"
+          className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-cream-100 to-amber-50 relative"
         >
-          {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-72 h-72 bg-purple-100 rounded-full opacity-30 translate-x-1/3 -translate-y-1/3"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-100 rounded-full opacity-30 -translate-x-1/3 translate-y-1/3"></div>
-
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
-            <div className="grid gap-10 lg:grid-cols-2 items-center max-w-6xl mx-auto">
-              <div className="relative">
-                <div className="absolute -top-6 -left-6 w-24 h-24 bg-purple-200 rounded-full opacity-50"></div>
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-200 rounded-full opacity-50"></div>
-                <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl border border-purple-100">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent z-10"></div>
+            <div className="grid gap-12 lg:grid-cols-2 items-center max-w-6xl mx-auto">
+              <div className="relative order-2 lg:order-1">
+                <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=400&width=400"
-                    alt="Shivani Khanna teaching"
+                    src="/placeholder.svg?height=500&width=400"
+                    alt="Shivani in her natural teaching environment"
                     fill
                     className="object-cover"
                   />
                 </div>
-              </div>
-              <div className="space-y-6">
-                <div className="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium">
-                  Meet Your Tutor
+                {/* Personal touch elements */}
+                <div className="absolute -top-6 -left-6 bg-amber-100 p-3 rounded-full border border-amber-200">
+                  <BookOpen className="h-6 w-6 text-amber-700" />
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-purple-800">
-                  Shivani Khanna
+                <div className="absolute -bottom-6 -right-6 bg-amber-200 p-3 rounded-full border border-amber-300">
+                  <Award className="h-6 w-6 text-amber-800" />
+                </div>
+              </div>
+
+              <div className="space-y-6 order-1 lg:order-2">
+                <div className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-medium border border-amber-200">
+                  A Little About Me
+                </div>
+                <h2 className="text-3xl font-light sm:text-4xl text-amber-900 leading-tight">
+                  Hi, I'm
+                  <span
+                    className="italic font-light text-amber-700 block"
+                    style={{ fontFamily: "serif" }}
+                  >
+                    Shivani Khanna
+                  </span>
                 </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full"></div>
-                <p className="text-slate-700 text-lg">
-                  With over 15 years of teaching experience, Shivani Khanna has
-                  a passion for helping children discover their potential. Her
-                  patient and nurturing approach creates a comfortable learning
-                  environment where students can thrive.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
-                      <BookOpen className="h-5 w-5 text-purple-600" />
-                    </div>
-                    <span className="text-slate-700">
-                      Certified Elementary Education Teacher
-                    </span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
-                      <GraduationCap className="h-5 w-5 text-purple-600" />
-                    </div>
-                    <span className="text-slate-700">
-                      Worked at British Council for 10 years
-                    </span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
-                      <MessageSquare className="h-5 w-5 text-purple-600" />
-                    </div>
-                    <span className="text-slate-700">
-                      Specialized in working with diverse learning styles
-                    </span>
-                  </li>
-                </ul>
+                <div className="w-20 h-0.5 bg-amber-600"></div>
+
+                <div className="space-y-4 text-amber-800 leading-relaxed">
+                  <p className="text-lg">
+                    Teaching isn't just my profession—it's my calling. For the
+                    past 15 years, I've been blessed to guide young learners on
+                    their educational journey, and each day brings new joy as I
+                    watch their confidence blossom.
+                  </p>
+                  <p>
+                    My approach is simple: every child is unique, brilliant, and
+                    deserving of an education that honors their individual
+                    learning style. Whether we're exploring the wonders of
+                    mathematics, diving into exciting scientific discoveries, or
+                    crafting beautiful stories together, I believe learning
+                    should feel nurturing and empowering.
+                  </p>
+                  <p>
+                    As a mother myself, I understand the hopes and dreams
+                    parents have for their children. My goal is to be a partner
+                    in your child's success—creating a warm, supportive space
+                    where they can truly thrive.
+                  </p>
+                </div>
+
               </div>
             </div>
           </div>
         </section>
 
-        {/* Testimonials Section - Moved right under hero */}
+        {/* Testimonials Section */}
         <section
           id="testimonials"
-          className="w-full py-12 md:py-16 bg-white relative"
+          className="w-full py-16 md:py-24 bg-gradient-to-b from-amber-50 to-cream-100 relative"
         >
-          <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-purple-50 to-white"></div>
-
-          {/* Decorative elements */}
-          <div className="absolute top-1/2 left-0 w-24 h-24 bg-purple-100 rounded-full opacity-50 -translate-x-1/2"></div>
-          <div className="absolute top-1/4 right-0 w-32 h-32 bg-purple-100 rounded-full opacity-50 translate-x-1/2"></div>
-
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
-              <div className="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium">
-                Success Stories
+            <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
+              <div className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-medium border border-amber-200">
+                Heartfelt Words
               </div>
-              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-purple-800">
-                What People Say About Shivani
+              <h2 className="text-3xl font-light sm:text-4xl md:text-5xl text-amber-900 max-w-3xl leading-tight">
+                What families are saying about our
+                <span
+                  className="italic font-light text-amber-700 block"
+                  style={{ fontFamily: "serif" }}
+                >
+                  learning journey together
+                </span>
               </h2>
-              <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full mx-auto"></div>
+              <div className="w-20 h-0.5 bg-amber-600"></div>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-3 relative max-w-6xl mx-auto">
+            <div className="grid gap-8 md:grid-cols-3 relative max-w-6xl mx-auto">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-purple-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow relative z-10"
+                  className="bg-white border-2 border-amber-100 p-8 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 relative"
                 >
-                  <div className="flex items-center gap-1 mb-4">
+                  <div className="flex items-center gap-1 mb-6">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className="h-4 w-4 fill-purple-400 text-purple-400"
+                        className="h-5 w-5 fill-amber-400 text-amber-400"
                       />
                     ))}
                   </div>
-                  <p className="text-slate-700 mb-6 italic">
+                  <p className="text-amber-800 mb-8 italic text-lg leading-relaxed">
                     "{testimonial.content}"
                   </p>
-                  <div className="flex items-center gap-3 mt-auto">
-                    <div className="rounded-full bg-purple-100 h-10 w-10 flex items-center justify-center">
-                      <span className="font-semibold text-purple-700">
+                  <div className="flex items-center gap-4 mt-auto border-t border-amber-200 pt-6">
+                    <div className="rounded-full bg-amber-200 h-12 w-12 flex items-center justify-center">
+                      <span className="font-semibold text-amber-800 text-lg">
                         {testimonial.name.charAt(0)}
                       </span>
                     </div>
                     <div>
-                      <p className="font-medium text-purple-900">
+                      <p className="font-semibold text-amber-900">
                         {testimonial.name}
                       </p>
-                      <p className="text-sm text-slate-500">
+                      <p className="text-sm text-amber-600">
                         {testimonial.relation}
                       </p>
                     </div>
@@ -223,517 +274,252 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Learning Approach Section */}
         <section
-          id="services"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-purple-50 relative"
+          id="approach"
+          className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-cream-100 to-amber-50 relative"
         >
-          {/* Decorative elements */}
-          <div className="absolute top-1/3 left-1/4 w-48 h-48 bg-purple-200 rounded-full opacity-20 blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-200 rounded-full opacity-20 blur-3xl"></div>
-
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <div className="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium">
-                Our Expertise
+            <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
+              <div className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-medium border border-amber-200">
+                My Teaching Philosophy
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-purple-800">
-                Subjects We Cover
+              <h2 className="text-3xl font-light sm:text-4xl text-amber-900 max-w-3xl leading-tight">
+                Learning that feels like
+                <span
+                  className="italic font-light text-amber-700 block"
+                  style={{ fontFamily: "serif" }}
+                >
+                  coming home
+                </span>
               </h2>
-              <p className="max-w-[700px] text-slate-600 md:text-lg">
-                Comprehensive tutoring tailored to your child's unique learning
-                style and needs.
+              <p className="max-w-2xl text-amber-700 text-lg leading-relaxed">
+                Every child learns differently, and I celebrate those
+                differences. Here's how we'll create magic together in Math,
+                Science, and English.
               </p>
-              <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full mx-auto"></div>
+              <div className="w-20 h-0.5 bg-amber-600"></div>
             </div>
 
             <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
-              <Card className="bg-white border-purple-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-purple-400 to-purple-600"></div>
-                <CardContent className="pt-6">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-purple-100">
-                    <span className="text-2xl">🔢</span>
+              <Card className="bg-white border-2 border-amber-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden rounded-3xl">
+                <CardContent className="p-8">
+                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100">
+                    <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center">
+                      <div className="w-4 h-4 bg-amber-100 rounded-full"></div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-purple-800 mb-2">
-                    Mathematics
+                  <h3 className="text-xl font-semibold text-amber-900 mb-4">
+                    Mathematics with Wonder
                   </h3>
-                  <p className="text-slate-600">
-                    From basic arithmetic to pre-algebra, we make math engaging
-                    and understandable through:
+                  <p className="text-amber-700 mb-6 leading-relaxed">
+                    We turn numbers into stories and problems into adventures.
+                    Math becomes a beautiful language your child will love to
+                    speak.
                   </p>
-                  <ul className="mt-4 space-y-2 text-slate-600">
-                    <li className="flex items-start gap-2">
-                      <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 3L4.5 8.5L2 6"
-                            stroke="#7e22ce"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                  <ul className="space-y-3 text-amber-700">
+                    <li className="flex items-start gap-3">
+                      <div className="rounded-full bg-amber-100 p-1 mt-1">
+                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                       </div>
-                      <span>Visual learning techniques</span>
+                      <span>Visual storytelling with numbers</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 3L4.5 8.5L2 6"
-                            stroke="#7e22ce"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                    <li className="flex items-start gap-3">
+                      <div className="rounded-full bg-amber-100 p-1 mt-1">
+                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                       </div>
-                      <span>Real-world problem solving</span>
+                      <span>Real-world connections that spark curiosity</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 3L4.5 8.5L2 6"
-                            stroke="#7e22ce"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                    <li className="flex items-start gap-3">
+                      <div className="rounded-full bg-amber-100 p-1 mt-1">
+                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                       </div>
-                      <span>Confidence building exercises</span>
+                      <span>Confidence-building through gentle challenge</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white border-purple-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-purple-400 to-purple-600"></div>
-                <CardContent className="pt-6">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-purple-100">
-                    <span className="text-2xl">🔬</span>
+              <Card className="bg-white border-2 border-amber-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden rounded-3xl">
+                <CardContent className="p-8">
+                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100">
+                    <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center">
+                      <div className="w-3 h-6 bg-amber-100 rounded-full"></div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-purple-800 mb-2">
-                    Science
+                  <h3 className="text-xl font-semibold text-amber-900 mb-4">
+                    Science as Discovery
                   </h3>
-                  <p className="text-slate-600">
-                    Exploring the natural world through hands-on activities and
-                    clear explanations:
+                  <p className="text-amber-700 mb-6 leading-relaxed">
+                    Every question is a doorway to wonder. We explore the
+                    natural world with curiosity and joy, making science feel
+                    like the greatest adventure.
                   </p>
-                  <ul className="mt-4 space-y-2 text-slate-600">
-                    <li className="flex items-start gap-2">
-                      <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 3L4.5 8.5L2 6"
-                            stroke="#7e22ce"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                  <ul className="space-y-3 text-amber-700">
+                    <li className="flex items-start gap-3">
+                      <div className="rounded-full bg-amber-100 p-1 mt-1">
+                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                       </div>
-                      <span>Interactive experiments</span>
+                      <span>Hands-on experiments that amaze</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 3L4.5 8.5L2 6"
-                            stroke="#7e22ce"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                    <li className="flex items-start gap-3">
+                      <div className="rounded-full bg-amber-100 p-1 mt-1">
+                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                       </div>
-                      <span>Conceptual understanding</span>
+                      <span>Nature-connected learning</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 3L4.5 8.5L2 6"
-                            stroke="#7e22ce"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                    <li className="flex items-start gap-3">
+                      <div className="rounded-full bg-amber-100 p-1 mt-1">
+                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                       </div>
-                      <span>Curiosity-driven learning</span>
+                      <span>Questions that lead to "aha!" moments</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white border-purple-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-purple-400 to-purple-600"></div>
-                <CardContent className="pt-6">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-purple-100">
-                    <span className="text-2xl">📚</span>
+              <Card className="bg-white border-2 border-amber-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden rounded-3xl">
+                <CardContent className="p-8">
+                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100">
+                    <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center">
+                      <div className="w-4 h-2 bg-amber-100 rounded-full"></div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-purple-800 mb-2">
-                    English
+                  <h3 className="text-xl font-semibold text-amber-900 mb-4">
+                    English as Expression
                   </h3>
-                  <p className="text-slate-600">
-                    Building strong reading comprehension, writing, and
-                    communication skills:
+                  <p className="text-amber-700 mb-6 leading-relaxed">
+                    Words are magic, and every child has their own voice waiting
+                    to be heard. We'll unlock the power of language together.
                   </p>
-                  <ul className="mt-4 space-y-2 text-slate-600">
-                    <li className="flex items-start gap-2">
-                      <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 3L4.5 8.5L2 6"
-                            stroke="#7e22ce"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                  <ul className="space-y-3 text-amber-700">
+                    <li className="flex items-start gap-3">
+                      <div className="rounded-full bg-amber-100 p-1 mt-1">
+                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                       </div>
-                      <span>Critical reading strategies</span>
+                      <span>Stories that come alive</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 3L4.5 8.5L2 6"
-                            stroke="#7e22ce"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                    <li className="flex items-start gap-3">
+                      <div className="rounded-full bg-amber-100 p-1 mt-1">
+                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                       </div>
-                      <span>Creative writing development</span>
+                      <span>Writing that flows from the heart</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 3L4.5 8.5L2 6"
-                            stroke="#7e22ce"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                    <li className="flex items-start gap-3">
+                      <div className="rounded-full bg-amber-100 p-1 mt-1">
+                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                       </div>
-                      <span>Grammar and vocabulary building</span>
+                      <span>Reading adventures we'll treasure together</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Tutoring Options Section */}
-            <div className="mt-16 pt-12 border-t border-purple-100">
-              <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                <div className="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium">
-                  Flexible Learning Options
-                </div>
-                <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl text-purple-800">
-                  Choose Your Preferred Format
+            {/* Learning Options */}
+            <div className="mt-20 pt-16 border-t border-amber-200">
+              <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
+                <h3 className="text-2xl font-light sm:text-3xl text-amber-900">
+                  How we'll
+                  <span
+                    className="italic font-light text-amber-700"
+                    style={{ fontFamily: "serif" }}
+                  >
+                    learn together
+                  </span>
                 </h3>
-                <p className="max-w-[600px] text-slate-600">
-                  We offer both online and in-person tutoring to accommodate
-                  your family's needs and preferences.
+                <p className="max-w-2xl text-amber-700 leading-relaxed">
+                  Whether in the comfort of your home or through our virtual
+                  classroom, every session is designed around your child's
+                  unique needs.
                 </p>
-                <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full mx-auto"></div>
               </div>
 
               <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
-                {/* In-Person Tutoring - Recommended */}
-                <Card className="bg-white border-purple-200 shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden relative">
-                  <div className="absolute top-0 right-0 bg-purple-600 text-white px-3 py-1 text-xs font-medium rounded-bl-lg">
+                <Card className="bg-white border-2 border-amber-200 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden rounded-3xl relative">
+                  <div className="absolute top-4 right-4 bg-amber-600 text-cream-50 px-3 py-1 text-xs font-medium rounded-full">
                     RECOMMENDED
                   </div>
-                  <div className="h-2 bg-gradient-to-r from-purple-500 to-purple-700"></div>
-                  <CardContent className="pt-6">
-                    <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-purple-100">
-                      <span className="text-2xl">🏠</span>
+                  <CardContent className="p-8">
+                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100">
+                      <div className="w-8 h-8 bg-amber-600 rounded-lg flex items-center justify-center">
+                        <div className="w-4 h-4 bg-amber-100 rounded-sm"></div>
+                      </div>
                     </div>
-                    <h4 className="text-xl font-bold text-purple-800 mb-2">
-                      In-Person Tutoring
+                    <h4 className="text-xl font-semibold text-amber-900 mb-4">
+                      In Your Home
                     </h4>
-                    <p className="text-slate-600 mb-4">
-                      Face-to-face sessions in the comfort of your home for
-                      maximum engagement and personalized attention.
+                    <p className="text-amber-700 mb-6 leading-relaxed">
+                      There's something magical about learning in a familiar
+                      space. I come to you, bringing warmth, patience, and all
+                      the tools we need to make learning wonderful.
                     </p>
-                    <ul className="space-y-3 text-slate-600">
-                      <li className="flex items-start gap-2">
-                        <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                          <svg
-                            width="12"
-                            height="12"
-                            viewBox="0 0 12 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 3L4.5 8.5L2 6"
-                              stroke="#7e22ce"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
+                    <div className="space-y-3 text-amber-700">
+                      <div className="flex items-start gap-3">
+                        <Heart className="h-5 w-5 text-amber-600 mt-0.5 fill-amber-600" />
                         <span>
-                          <strong>Better engagement</strong> with hands-on
-                          activities
+                          <strong>Personal connection</strong> in your child's
+                          comfort zone
                         </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                          <svg
-                            width="12"
-                            height="12"
-                            viewBox="0 0 12 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 3L4.5 8.5L2 6"
-                              stroke="#7e22ce"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Users className="h-5 w-5 text-amber-600 mt-0.5" />
                         <span>
-                          <strong>Immediate feedback</strong> and real-time
-                          support
+                          <strong>Hands-on learning</strong> with real materials
                         </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                          <svg
-                            width="12"
-                            height="12"
-                            viewBox="0 0 12 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 3L4.5 8.5L2 6"
-                              stroke="#7e22ce"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Award className="h-5 w-5 text-amber-600 mt-0.5" />
                         <span>
-                          <strong>Fewer distractions</strong> in familiar
-                          environment
+                          <strong>Fewer distractions,</strong> deeper focus
                         </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                          <svg
-                            width="12"
-                            height="12"
-                            viewBox="0 0 12 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 3L4.5 8.5L2 6"
-                              stroke="#7e22ce"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
-                        <span>
-                          <strong>Proven better outcomes</strong> for elementary
-                          students
-                        </span>
-                      </li>
-                    </ul>
-                    <div className="mt-6 p-3 bg-purple-50 rounded-lg border border-purple-100">
-                      <p className="text-sm text-purple-700">
-                        <strong>Why we recommend in-person:</strong> Young
-                        learners thrive with direct interaction, tactile
-                        learning materials, and the focused attention that comes
-                        with face-to-face instruction.
-                      </p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                {/* Online Tutoring */}
-                <Card className="bg-white border-purple-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
-                  <div className="h-2 bg-gradient-to-r from-purple-300 to-purple-500"></div>
-                  <CardContent className="pt-6">
-                    <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-purple-100">
-                      <span className="text-2xl">💻</span>
+                <Card className="bg-white border-2 border-amber-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden rounded-3xl">
+                  <CardContent className="p-8">
+                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100">
+                      <div className="w-8 h-8 bg-amber-600 rounded-lg flex items-center justify-center">
+                        <div className="w-3 h-3 bg-amber-100 rounded-full"></div>
+                      </div>
                     </div>
-                    <h4 className="text-xl font-bold text-purple-800 mb-2">
-                      Online Tutoring
+                    <h4 className="text-xl font-semibold text-amber-900 mb-4">
+                      Virtual Classroom
                     </h4>
-                    <p className="text-slate-600 mb-4">
-                      Convenient virtual sessions using interactive tools and
-                      digital resources for flexible learning.
+                    <p className="text-amber-700 mb-6 leading-relaxed">
+                      When distance is a factor, we create our own cozy learning
+                      space online. Same warmth, same personal attention, just
+                      through a screen.
                     </p>
-                    <ul className="space-y-3 text-slate-600">
-                      <li className="flex items-start gap-2">
-                        <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                          <svg
-                            width="12"
-                            height="12"
-                            viewBox="0 0 12 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 3L4.5 8.5L2 6"
-                              stroke="#7e22ce"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
+                    <div className="space-y-3 text-amber-700">
+                      <div className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-amber-200 mt-0.5 flex items-center justify-center">
+                          <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                         </div>
                         <span>
-                          <strong>Flexible scheduling</strong> options
+                          <strong>Flexible scheduling</strong> for busy families
                         </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                          <svg
-                            width="12"
-                            height="12"
-                            viewBox="0 0 12 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 3L4.5 8.5L2 6"
-                              stroke="#7e22ce"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-amber-200 mt-0.5 flex items-center justify-center">
+                          <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                         </div>
                         <span>
-                          <strong>No travel time</strong> required
+                          <strong>Interactive tools</strong> that make learning
+                          fun
                         </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                          <svg
-                            width="12"
-                            height="12"
-                            viewBox="0 0 12 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 3L4.5 8.5L2 6"
-                              stroke="#7e22ce"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-amber-200 mt-0.5 flex items-center justify-center">
+                          <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                         </div>
                         <span>
-                          <strong>Digital tools</strong> and interactive
-                          whiteboards
+                          <strong>Recordings available</strong> for review and
+                          reinforcement
                         </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="rounded-full bg-purple-100 p-1 mt-0.5">
-                          <svg
-                            width="12"
-                            height="12"
-                            viewBox="0 0 12 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 3L4.5 8.5L2 6"
-                              stroke="#7e22ce"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
-                        <span>
-                          <strong>Session recordings</strong> available for
-                          review
-                        </span>
-                      </li>
-                    </ul>
-                    <div className="mt-6 p-3 bg-slate-50 rounded-lg border border-slate-200">
-                      <p className="text-sm text-slate-600">
-                        <strong>Best for:</strong> Students who are comfortable
-                        with technology and families with busy schedules or
-                        transportation constraints.
-                      </p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -742,170 +528,118 @@ export default function Home() {
           </div>
         </section>
 
-
         {/* Contact Section */}
         <section
           id="contact"
-          className="w-full py-12 md:py-24 lg:py-32 bg-purple-50 relative"
+          className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-amber-50 to-cream-100 relative"
         >
-          {/* Decorative elements */}
-          <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white to-purple-50"></div>
-          <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-200 rounded-full opacity-20 translate-x-1/3 translate-y-1/3"></div>
-
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
-            <div className="grid gap-10 lg:grid-cols-2 items-center max-w-6xl mx-auto">
-              <div className="space-y-6">
-                <div className="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium">
-                  Get Started
+            <div className="grid gap-12 lg:grid-cols-2 items-center max-w-6xl mx-auto">
+              <div className="space-y-8">
+                <div className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-medium border border-amber-200">
+                  Let's Begin This Journey
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-purple-800">
-                  Ready to Help Your Child Excel?
+                <h2 className="text-3xl font-light sm:text-4xl text-amber-900 leading-tight">
+                  Ready to discover your child's
+                  <span
+                    className="italic font-light text-amber-700 block"
+                    style={{ fontFamily: "serif" }}
+                  >
+                    unique brilliance?
+                  </span>
                 </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full"></div>
-                <p className="text-slate-700 text-lg">
-                  Contact us today to schedule a free consultation and learn
-                  more about our personalized tutoring services.
+                <div className="w-20 h-0.5 bg-amber-600"></div>
+                <p className="text-amber-800 text-lg leading-relaxed">
+                  I'd love to meet you and your child. Let's have a warm
+                  conversation about their dreams, interests, and how we can
+                  make learning an adventure they'll cherish.
                 </p>
                 <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-purple-600"
-                      >
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                      </svg>
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100">
+                      <MessageSquare className="h-6 w-6 text-amber-700" />
                     </div>
-                    <span className="text-slate-700">+971 50 596 4988</span>
+                    <div>
+                      <p className="font-medium text-amber-900">Let's Chat</p>
+                      <p className="text-amber-700">(555) 123-4567</p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-purple-600"
-                      >
-                        <rect width="20" height="16" x="2" y="4" rx="2" />
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                      </svg>
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100">
+                      <div className="w-6 h-6 bg-amber-600 rounded-full flex items-center justify-center">
+                        <div className="w-3 h-3 bg-amber-100 rounded-full"></div>
+                      </div>
                     </div>
-                    <span className="text-slate-700">
-                      contact@khannatutoring.com
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-purple-600"
-                      >
-                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                        <circle cx="12" cy="10" r="3" />
-                      </svg>
+                    <div>
+                      <p className="font-medium text-amber-900">Write to Me</p>
+                      <p className="text-amber-700">
+                        hello@shivanitutoring.com
+                      </p>
                     </div>
-                    <span className="text-slate-700">
-                      Reem Island, Abu Dhabi
-                    </span>
                   </div>
                 </div>
               </div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-purple-100">
-                <h3 className="text-xl font-bold text-purple-800 mb-6">
-                  Request Information
+
+              <div className="bg-white p-8 rounded-3xl shadow-xl border-2 border-amber-100">
+                <h3 className="text-xl font-semibold text-amber-900 mb-6">
+                  Start with a Friendly Chat
                 </h3>
-                <div className="grid gap-5">
-                  <div className="grid grid-cols-2 gap-5">
+                <div className="grid gap-6">
+                  <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label
-                        htmlFor="first-name"
-                        className="text-sm font-medium text-slate-700"
+                        htmlFor="parent-name"
+                        className="text-sm font-medium text-amber-800"
                       >
-                        First name
+                        Your name
                       </label>
                       <input
-                        id="first-name"
-                        className="flex h-10 w-full rounded-md border border-purple-200 bg-white px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2"
-                        placeholder="Enter your first name"
+                        id="parent-name"
+                        className="flex h-12 w-full rounded-2xl border-2 border-amber-200 bg-cream-50 px-4 py-3 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:border-amber-400"
+                        placeholder="Tell me your name"
                       />
                     </div>
                     <div className="space-y-2">
                       <label
-                        htmlFor="last-name"
-                        className="text-sm font-medium text-slate-700"
+                        htmlFor="child-name"
+                        className="text-sm font-medium text-amber-800"
                       >
-                        Last name
+                        Your child's name
                       </label>
                       <input
-                        id="last-name"
-                        className="flex h-10 w-full rounded-md border border-purple-200 bg-white px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2"
-                        placeholder="Enter your last name"
+                        id="child-name"
+                        className="flex h-12 w-full rounded-2xl border-2 border-amber-200 bg-cream-50 px-4 py-3 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:border-amber-400"
+                        placeholder="Your wonderful child"
                       />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <label
                       htmlFor="email"
-                      className="text-sm font-medium text-slate-700"
+                      className="text-sm font-medium text-amber-800"
                     >
                       Email
                     </label>
                     <input
                       id="email"
                       type="email"
-                      className="flex h-10 w-full rounded-md border border-purple-200 bg-white px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="phone"
-                      className="text-sm font-medium text-slate-700"
-                    >
-                      Phone
-                    </label>
-                    <input
-                      id="phone"
-                      type="tel"
-                      className="flex h-10 w-full rounded-md border border-purple-200 bg-white px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2"
-                      placeholder="Enter your phone number"
+                      className="flex h-12 w-full rounded-2xl border-2 border-amber-200 bg-cream-50 px-4 py-3 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:border-amber-400"
+                      placeholder="How can I reach you?"
                     />
                   </div>
                   <div className="space-y-2">
                     <label
                       htmlFor="child-grade"
-                      className="text-sm font-medium text-slate-700"
+                      className="text-sm font-medium text-amber-800"
                     >
-                      Child's Grade
+                      What grade is your child in?
                     </label>
                     <select
                       id="child-grade"
-                      className="flex h-10 w-full rounded-md border border-purple-200 bg-white px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2"
+                      className="flex h-12 w-full rounded-2xl border-2 border-amber-200 bg-cream-50 px-4 py-3 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:border-amber-400"
                     >
                       <option value="" disabled selected>
-                        Select grade
+                        Select their grade
                       </option>
                       <option value="K">Kindergarten</option>
                       <option value="1">Grade 1</option>
@@ -921,18 +655,18 @@ export default function Home() {
                   <div className="space-y-2">
                     <label
                       htmlFor="message"
-                      className="text-sm font-medium text-slate-700"
+                      className="text-sm font-medium text-amber-800"
                     >
-                      Message
+                      Tell me about your child
                     </label>
                     <textarea
                       id="message"
-                      className="flex min-h-[100px] w-full rounded-md border border-purple-200 bg-white px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2"
-                      placeholder="Tell us about your child's needs"
+                      className="flex min-h-[120px] w-full rounded-2xl border-2 border-amber-200 bg-cream-50 px-4 py-3 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:border-amber-400"
+                      placeholder="What makes your child special? What are their interests, dreams, or any learning goals you have in mind?"
                     />
                   </div>
-                  <Button className="w-full bg-purple-600 hover:bg-purple-700 rounded-md">
-                    Submit Request
+                  <Button className="w-full bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-2xl h-12 text-lg font-medium">
+                    Let's Start This Beautiful Journey
                   </Button>
                 </div>
               </div>
@@ -940,26 +674,36 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t border-purple-100 py-6 bg-white">
-        <div className="container max-w-7xl mx-auto flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row px-4 md:px-6">
-          <div className="flex items-center gap-2">
-            <GraduationCap className="h-5 w-5 text-purple-600" />
-            <p className="text-center text-sm leading-loose text-slate-600 md:text-left">
-              © {new Date().getFullYear()} Khanna Tutoring. All rights reserved.
+
+      <footer className="w-full border-t border-amber-200 py-8 bg-gradient-to-b from-cream-100 to-amber-100">
+        <div className="container max-w-7xl mx-auto flex flex-col items-center justify-between gap-4 md:flex-row px-4 md:px-6">
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <div className="flex items-center gap-2">
+              <span
+                className="text-lg italic text-amber-700"
+                style={{ fontFamily: "serif" }}
+              >
+                Shivani's
+              </span>
+              <span className="text-sm font-bold text-amber-900">TUTORING</span>
+            </div>
+            <p className="text-center text-sm text-amber-700 md:text-left">
+              © {new Date().getFullYear()} • Made with love for every child's
+              journey
             </p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             <Link
               href="#"
-              className="text-sm text-slate-600 hover:text-purple-600 transition-colors"
+              className="text-sm text-amber-700 hover:text-amber-600 transition-colors"
             >
-              Privacy Policy
+              Privacy & Care
             </Link>
             <Link
               href="#"
-              className="text-sm text-slate-600 hover:text-purple-600 transition-colors"
+              className="text-sm text-amber-700 hover:text-amber-600 transition-colors"
             >
-              Terms of Service
+              Learning Agreement
             </Link>
           </div>
         </div>
