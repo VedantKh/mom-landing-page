@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://shivanitutoring.com/sitemap.xml
+
+# Optimize crawl budget - block unnecessary files
+Disallow: /_next/static/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*_buildManifest.js$
+Disallow: /*_ssgManifest.js$ 
