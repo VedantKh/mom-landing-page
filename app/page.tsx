@@ -130,26 +130,12 @@ export default function Home() {
                 <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl border-4 border-cream-100">
                   <div className="absolute inset-0 bg-gradient-to-tr from-amber-600/10 to-transparent z-10"></div>
                   <Image
-                    src="/placeholder.svg?height=600&width=500"
+                    src="/assets/hero.png"
                     alt="Shivani teaching with warmth and care"
                     fill
                     className="object-cover"
                     priority
                   />
-                </div>
-                {/* Floating elements */}
-                <div className="absolute -top-4 -right-4 bg-cream-50 p-4 rounded-2xl shadow-lg border border-amber-100">
-                  <div className="flex items-center gap-2">
-                    <Star className="h-4 w-4 text-amber-500 fill-amber-500" />
-                    <span className="text-sm font-medium text-amber-800">
-                      Trusted by families
-                    </span>
-                  </div>
-                </div>
-                <div className="absolute -bottom-4 -left-4 bg-cream-50 p-4 rounded-2xl shadow-lg border border-amber-100">
-                  <div className="text-sm font-medium text-amber-800">
-                    British Council Certified
-                  </div>
                 </div>
               </div>
             </div>
@@ -166,7 +152,7 @@ export default function Home() {
               <div className="relative order-2 lg:order-1">
                 <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=500&width=400"
+                    src="/assets/about.png"
                     alt="Shivani in her natural teaching environment"
                     fill
                     className="object-cover"
