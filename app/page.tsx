@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  BookOpen,
   MessageSquare,
   Star,
   Heart,
@@ -492,12 +490,6 @@ export default function Home() {
                   <div className="flex items-center gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100">
                       <Mail className="h-6 w-6 text-amber-700" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-amber-900">Write to Me</p>
-                      <p className="text-amber-700">
-                        hello@shivanitutoring.com
-                      </p>
                     </div>
                   </div>
                 </div>
