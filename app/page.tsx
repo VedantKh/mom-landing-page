@@ -147,20 +147,13 @@ export default function Home() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
             <div className="grid gap-12 lg:grid-cols-2 items-center max-w-6xl mx-auto">
               <div className="relative order-2 lg:order-1">
-                <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl">
+                <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-xl">
                   <Image
                     src="/assets/about.png"
                     alt="Shivani in her natural teaching environment"
                     fill
                     className="object-cover"
                   />
-                </div>
-                {/* Personal touch elements */}
-                <div className="absolute -top-6 -left-6 bg-amber-100 p-3 rounded-full border border-amber-200">
-                  <BookOpen className="h-6 w-6 text-amber-700" />
-                </div>
-                <div className="absolute -bottom-6 -right-6 bg-amber-200 p-3 rounded-full border border-amber-300">
-                  <Award className="h-6 w-6 text-amber-800" />
                 </div>
               </div>
 
@@ -507,7 +500,7 @@ export default function Home() {
               </div>
 
               <div className="relative">
-                <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl">
+                <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-xl">
                   <div className="absolute inset-0 bg-gradient-to-tr from-amber-600/10 to-transparent z-10"></div>
                   <Image
                     src="/assets/contact.png"
