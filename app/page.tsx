@@ -475,19 +475,14 @@ export default function Home() {
                   conversation about their interests and how we can make
                   learning a process they&apos;ll cherish.
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100">
-                      <MessageSquare className="h-6 w-6 text-amber-700" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-amber-900">
-                        Let&apos;s Chat
-                      </p>
-                      <p className="text-amber-700">(+971) 50 596 4988</p>
-                    </div>
-                  </div>
-                </div>
+                <Link
+                  href="https://wa.me/971505964988?text=Hi Shivani, I'd like to book a consultation for my child."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-full px-8 py-3 text-lg font-medium inline-flex items-center justify-center transition-colors w-fit"
+                >
+                  Book a Chat
+                </Link>
               </div>
 
               <div className="relative">
