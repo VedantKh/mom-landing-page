@@ -19,8 +19,8 @@ import {
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-b from-amber-50 via-cream-50 to-amber-50">
-      <header className="sticky top-0 z-40 border-b border-amber-200 bg-cream-50/95 backdrop-blur supports-[backdrop-filter]:bg-cream-50/90">
+    <div className="flex min-h-screen flex-col bg-gradient-to-b from-amber-50 via-gray-50 to-amber-50">
+      <header className="sticky top-0 z-40 border-b border-amber-200 bg-gray-50/35 backdrop-blur supports-[backdrop-filter]:bg-gray-50/35">
         <div className="container max-w-7xl mx-auto flex h-20 items-center justify-between py-4 px-4 md:px-6">
           <div className="flex items-center gap-3">
             <div className="flex flex-col items-center">
@@ -66,7 +66,7 @@ export default function Home() {
             href="https://wa.me/971505964988?text=Hi Shivani, I'd like to book a consultation for my child."
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-full px-6 py-3 font-medium inline-flex items-center justify-center transition-colors"
+            className="bg-amber-700 hover:bg-amber-800 text-gray-50 rounded-full px-6 py-3 font-medium inline-flex items-center justify-center transition-colors"
           >
             Book a Chat
           </Link>
@@ -75,7 +75,7 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-b from-amber-50 to-cream-100">
+        <section className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-b from-amber-50 to-gray-100">
           {/* Subtle decorative elements */}
           <div className="absolute top-1/4 left-0 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl -translate-x-1/2"></div>
           <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-amber-300/20 rounded-full blur-3xl translate-x-1/2"></div>
@@ -103,7 +103,7 @@ export default function Home() {
                     href="https://wa.me/971505964988?text=Hi Shivani, I'd like to book a consultation for my child."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-full px-8 py-3 text-lg font-medium inline-flex items-center justify-center transition-colors"
+                    className="bg-amber-700 hover:bg-amber-800 text-gray-50 rounded-full px-8 py-3 text-lg font-medium inline-flex items-center justify-center transition-colors"
                   >
                     Start Our Journey Together
                   </Link>
@@ -142,7 +142,7 @@ export default function Home() {
         {/* About Section */}
         <section
           id="about"
-          className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-cream-100 to-amber-50 relative"
+          className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-gray-100 to-amber-50 relative"
         >
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
             <div className="grid gap-12 lg:grid-cols-2 items-center max-w-6xl mx-auto">
@@ -199,7 +199,7 @@ export default function Home() {
         {/* Testimonials Section */}
         <section
           id="testimonials"
-          className="w-full py-16 md:py-24 bg-gradient-to-b from-amber-50 to-cream-100 relative"
+          className="w-full py-16 md:py-24 bg-gradient-to-b from-amber-50 to-gray-100 relative"
         >
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
             <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
@@ -256,7 +256,7 @@ export default function Home() {
         {/* Learning Approach Section */}
         <section
           id="approach"
-          className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-cream-100 to-amber-50 relative"
+          className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-gray-100 to-amber-50 relative"
         >
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
             <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
@@ -379,7 +379,7 @@ export default function Home() {
 
               <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
                 <Card className="bg-white border-2 border-amber-200 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden rounded-3xl relative">
-                  <div className="absolute top-4 right-4 bg-amber-600 text-cream-50 px-3 py-1 text-xs font-medium rounded-full">
+                  <div className="absolute top-4 right-4 bg-amber-600 text-gray-50 px-3 py-1 text-xs font-medium rounded-full">
                     RECOMMENDED
                   </div>
                   <CardContent className="p-8">
@@ -453,7 +453,7 @@ export default function Home() {
         {/* Contact Section */}
         <section
           id="contact"
-          className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-amber-50 to-cream-100 relative"
+          className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-amber-50 to-gray-100 relative"
         >
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
             <div className="grid gap-12 lg:grid-cols-2 items-center max-w-6xl mx-auto">
@@ -477,7 +477,7 @@ export default function Home() {
                   href="https://wa.me/971505964988?text=Hi Shivani, I'd like to book a consultation for my child."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-full px-8 py-3 text-lg font-medium inline-flex items-center justify-center transition-colors w-fit"
+                  className="bg-amber-700 hover:bg-amber-800 text-gray-50 rounded-full px-8 py-3 text-lg font-medium inline-flex items-center justify-center transition-colors w-fit"
                 >
                   Book a Chat
                 </Link>
@@ -499,7 +499,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="w-full border-t border-amber-200 py-8 bg-gradient-to-b from-cream-100 to-amber-100">
+      <footer className="w-full border-t border-amber-200 py-8 bg-gradient-to-b from-gray-100 to-amber-100">
         <div className="container max-w-7xl mx-auto flex flex-col items-center justify-between gap-4 md:flex-row px-4 md:px-6">
           <div className="flex flex-col items-center md:items-start gap-2">
             <div className="flex items-center gap-2">
