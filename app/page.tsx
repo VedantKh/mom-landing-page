@@ -84,9 +84,9 @@ export default function Home() {
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="space-y-8">
                 <h1 className="text-4xl font-light leading-tight sm:text-5xl md:text-6xl lg:text-7xl text-amber-900">
-                  Making your child&apos;s potential
+                  Making your child&apos;s potential{" "}
                   <span
-                    className="block italic font-light text-amber-700"
+                    className="italic font-light text-amber-700"
                     style={{ fontFamily: "serif" }}
                   >
                     bloom
@@ -176,19 +176,13 @@ export default function Home() {
                     learners on their educational journey, and each day brings
                     new joy as I watch their confidence blossom.
                   </p>
-                  <p>
+                  <p className="text-lg">
                     My approach is simple: every child is unique, brilliant, and
                     deserving of an education that honors their individual
                     learning style. Whether we&apos;re exploring the wonders of
                     mathematics, diving into exciting scientific discoveries, or
                     crafting beautiful stories together, I believe learning
                     should feel nurturing and empowering.
-                  </p>
-                  <p>
-                    As a mother myself, I understand the hopes and dreams
-                    parents have for their children. My goal is to be a partner
-                    in your child&apos;s success—creating a warm, supportive
-                    space where they can truly thrive.
                   </p>
                 </div>
               </div>
