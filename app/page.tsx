@@ -487,11 +487,6 @@ export default function Home() {
                       <p className="text-amber-700">(+971) 50 596 4988</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100">
-                      <Mail className="h-6 w-6 text-amber-700" />
-                    </div>
-                  </div>
                 </div>
               </div>
 
