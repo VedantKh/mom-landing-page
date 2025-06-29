@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  MessageSquare,
   Star,
   Heart,
   Users,
@@ -13,7 +12,6 @@ import {
   Microscope,
   Book,
   CheckCircle,
-  Mail,
   Clock,
   Video,
   FileText,
