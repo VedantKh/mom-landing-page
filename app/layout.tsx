@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Shivani Tutoring | K-8 Private Tutor in Abu Dhabi",
   description:
-    "15-year veteran tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
+    "15-year experienced tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
   keywords: [
     "private tutor Abu Dhabi",
     "K-8 tutoring Abu Dhabi",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     url: "https://shivanitutoring.com/",
     title: "Shivani Tutoring | K-8 Private Tutor in Abu Dhabi",
     description:
-      "15-year veteran tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
+      "15-year experienced tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
     siteName: "Shivani's Tutoring",
     images: [
       {
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shivani Tutoring | K-8 Private Tutor in Abu Dhabi",
     description:
-      "15-year veteran tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
+      "15-year experienced tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
     images: ["https://shivanitutoring.com/assets/hero.png"],
     creator: "@shivanitutoring",
   },
