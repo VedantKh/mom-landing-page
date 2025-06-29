@@ -66,9 +66,14 @@ export default function Home() {
               Let&apos;s Chat
             </Link>
           </nav>
-          <Button className="bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-full px-6 font-medium">
+          <Link
+            href="https://wa.me/971505964988?text=Hi Shivani, I'd like to book a consultation for my child."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-full px-6 py-3 font-medium inline-flex items-center justify-center transition-colors"
+          >
             Book a Chat
-          </Button>
+          </Link>
         </div>
       </header>
 
@@ -98,15 +103,14 @@ export default function Home() {
                   journey to get there.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-full px-8 py-3 text-lg font-medium">
-                    Start Our Journey Together
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-2 border-amber-300 text-amber-700 hover:bg-amber-50 bg-transparent rounded-full px-8 py-3 text-lg font-medium"
+                  <Link
+                    href="https://wa.me/971505964988?text=Hi Shivani, I'd like to book a consultation for my child."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-amber-700 hover:bg-amber-800 text-cream-50 rounded-full px-8 py-3 text-lg font-medium inline-flex items-center justify-center transition-colors"
                   >
-                    Learn About My Story
-                  </Button>
+                    Start Our Journey Together
+                  </Link>
                 </div>
                 <div className="flex items-center gap-6 pt-4 pl-2">
                   <div className="flex items-center gap-2">
