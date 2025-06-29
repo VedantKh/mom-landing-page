@@ -82,9 +82,6 @@ export default function Home() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="space-y-8">
-                <div className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-medium border border-amber-200">
-                  Personal Learning Journey • Grades K-8
-                </div>
                 <h1 className="text-4xl font-light leading-tight sm:text-5xl md:text-6xl lg:text-7xl text-amber-900">
                   Making your child&apos;s potential
                   <span
@@ -168,9 +165,6 @@ export default function Home() {
               </div>
 
               <div className="space-y-6 order-1 lg:order-2">
-                <div className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-medium border border-amber-200">
-                  A Little About Me
-                </div>
                 <h2 className="text-3xl font-light sm:text-4xl text-amber-900 leading-tight">
                   Hi, I&apos;m
                   <span
@@ -216,9 +210,6 @@ export default function Home() {
         >
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
             <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
-              <div className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-medium border border-amber-200">
-                Heartfelt Words
-              </div>
               <h2 className="text-3xl font-light sm:text-4xl md:text-5xl text-amber-900 max-w-3xl leading-tight">
                 What families are saying about our
                 <span
@@ -276,9 +267,6 @@ export default function Home() {
         >
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
             <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
-              <div className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-medium border border-amber-200">
-                My Teaching Philosophy
-              </div>
               <h2 className="text-3xl font-light sm:text-4xl text-amber-900 max-w-3xl leading-tight">
                 Learning that feels like
                 <span
@@ -477,9 +465,6 @@ export default function Home() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6 relative">
             <div className="grid gap-12 lg:grid-cols-2 items-center max-w-6xl mx-auto">
               <div className="space-y-8">
-                <div className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-medium border border-amber-200">
-                  Let&apos;s Begin This Journey
-                </div>
                 <h2 className="text-3xl font-light sm:text-4xl text-amber-900 leading-tight">
                   Ready to discover your child&apos;s
                   <span

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "K-8 Private Tutor in Abu Dhabi | Shivani's Tutoring & Online Lessons",
+  title: "Shivani Tutoring | K-8 Private Tutor in Abu Dhabi",
   description:
     "15-year veteran tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
   keywords: [
@@ -50,7 +50,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://shivanitutoring.com/",
-    title: "K-8 Private Tutor in Abu Dhabi | Shivani's Tutoring & Online Lessons",
+    title:
+      "K-8 Private Tutor in Abu Dhabi | Shivani's Tutoring & Online Lessons",
     description:
       "15-year veteran tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
     siteName: "Shivani's Tutoring",
@@ -65,7 +66,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "K-8 Private Tutor in Abu Dhabi | Shivani's Tutoring & Online Lessons",
+    title:
+      "K-8 Private Tutor in Abu Dhabi | Shivani's Tutoring & Online Lessons",
     description:
       "15-year veteran tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
     images: ["https://shivanitutoring.com/assets/hero.png"],
@@ -293,6 +295,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
