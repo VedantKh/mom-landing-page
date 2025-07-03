@@ -254,14 +254,7 @@ export default function Home() {
                     curiosity, and ensure long-term retention.
                   </p>
                   <p className="text-lg">
-                    Every student learns differently, so I adapt my teaching
-                    style to meet their needs—breaking down complex ideas into
-                    clear, relatable steps. My goal is always to help students
-                    feel proud of what they've learned and prepared for whatever
-                    comes next, academically and beyond.
-                  </p>
-                  <p className="text-lg">
-                    In addition to Maths and Science, I also offer specialised{" "}
+                    I also offer specialised{" "}
                     <span className="font-bold">Phonics tutoring</span> to help
                     young learners develop strong reading and spelling skills. I
                     understand how important it is for children to build a solid
@@ -626,24 +619,3 @@ export default function Home() {
     </div>
   );
 }
-
-const testimonials = [
-  {
-    name: "Sarah Thompson",
-    relation: "Parent of 3rd grader",
-    content:
-      "Shivani has been a blessing for our family. My son struggled with math anxiety, but after just a few sessions, he's approaching problems with confidence. Her patience and teaching methods are exceptional.",
-  },
-  {
-    name: "Michael Rodriguez",
-    relation: "Parent of 6th grader",
-    content:
-      "Our daughter's science grades have improved dramatically since working with Shivani. She makes complex concepts easy to understand and keeps learning fun and engaging.",
-  },
-  {
-    name: "Vedant Khanna",
-    relation: "Son of Shivani Khanna",
-    content:
-      "I have been a student of Shivani Khanna for 18 years. She has been the best teacher I have ever had because no one else cares as much about her students as she does. I am now studying Math at Stanford University.",
-  },
-];
