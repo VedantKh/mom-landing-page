@@ -17,7 +17,7 @@ import {
   Video,
 } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 const testimonials = [
   {
@@ -30,7 +30,7 @@ const testimonials = [
     name: "Nada Harb",
     relation: "Parent of Miral Harb, 6th grader",
     content:
-      "We have been working with Ms. Shivani for a year, and we can confidently say she's an excellent tutor who would go above and beyond in finding the most effective way of delivering studying material. Ms. Shivani is highly competent and knows how to assess kids' receiving abilities, then would structure the lessons to match students learning techniques. Besides the usual subjects, Ms. Shivani looks for potential and areas where kids can excel, and would highlight to parents. Our daughter has significantly improved from not liking math to being recognizable by her class teacher as an excellent example. Well done Ms. Shivani, and thank you for your diligence and care!",
+      "We have been working with Ms. Shivani for a year, and we can confidently say she&apos;s an excellent tutor who would go above and beyond in finding the most effective way of delivering studying material. Ms. Shivani is highly competent and knows how to assess kids' receiving abilities, then would structure the lessons to match students learning techniques. Besides the usual subjects, Ms. Shivani looks for potential and areas where kids can excel, and would highlight to parents. Our daughter has significantly improved from not liking math to being recognizable by her class teacher as an excellent example. Well done Ms. Shivani, and thank you for your diligence and care!",
   },
   {
     name: "Vedant Khanna",
@@ -48,20 +48,27 @@ export default function Home() {
   // We duplicate the testimonials to create a seamless loop
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
-  const totalWidth = testimonials.reduce((acc, _, index) => {
-    const cardWidth = index === 1 ? BASE_WIDTH * 3 : BASE_WIDTH;
-    return acc + cardWidth + GAP;
-  }, 0);
+  const totalWidth = useMemo(
+    () =>
+      testimonials.reduce((acc, _, index) => {
+        const cardWidth = index === 1 ? BASE_WIDTH * 3 : BASE_WIDTH;
+        return acc + cardWidth + GAP;
+      }, 0),
+    []
+  );
 
-  const animation = {
-    x: -totalWidth,
-    transition: {
-      ease: "linear" as const,
-      duration: 50, // Slower duration for a smoother scroll
-      repeat: Infinity,
-      repeatType: "loop" as const,
-    },
-  };
+  const animation = useMemo(
+    () => ({
+      x: -totalWidth,
+      transition: {
+        ease: "linear" as const,
+        duration: 50, // Slower duration for a smoother scroll
+        repeat: Infinity,
+        repeatType: "loop" as const,
+      },
+    }),
+    [totalWidth]
+  );
 
   useEffect(() => {
     controls.start(animation);
@@ -234,8 +241,8 @@ export default function Home() {
 
                 <div className="space-y-4 text-amber-800 leading-relaxed">
                   <p className="text-lg">
-                    Hi! I'm a passionate and patient tutor who loves helping
-                    students build a strong foundation in{" "}
+                    Hi! I&apos;m a passionate and patient tutor who loves
+                    helping students build a strong foundation in{" "}
                     <span className="font-bold">Maths and Science</span>
                     —subjects I believe can be fun, empowering, and deeply
                     rewarding when understood properly. I specialise in tutoring
@@ -247,10 +254,10 @@ export default function Home() {
                     My approach goes beyond memorising formulas or facts. I
                     focus on making sure every student truly{" "}
                     <span className="font-bold">
-                      understands the "why" and "how"
+                      understands the &quot;why&quot; and &quot;how&quot;
                     </span>{" "}
-                    behind each topic. Whether it's fractions, forces, or the
-                    scientific method, I work to build confidence, spark
+                    behind each topic. Whether it&apos;s fractions, forces, or
+                    the scientific method, I work to build confidence, spark
                     curiosity, and ensure long-term retention.
                   </p>
                   <p className="text-lg">
