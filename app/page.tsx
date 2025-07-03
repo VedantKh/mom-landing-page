@@ -93,10 +93,9 @@ export default function Home() {
                   </span>
                 </h1>
                 <p className="max-w-[600px] text-amber-800 text-lg md:text-xl leading-relaxed">
-                  I&apos;m Shivani, and I love teaching children. As a mother
-                  myself, I understand the hopes and dreams parents have for
-                  their little ones, and love joining each family on their
-                  journey to get there.
+                  As a mother myself, I understand the hopes and dreams parents
+                  have to see their children grow into confident and capable
+                  individuals ready to thrive in life.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -109,12 +108,6 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="flex items-center gap-6 pt-4 pl-2">
-                  <div className="flex items-center gap-2">
-                    <Heart className="h-5 w-5 text-amber-600 fill-amber-600" />
-                    <span className="text-sm text-amber-700">
-                      15+ Years of Love & Learning
-                    </span>
-                  </div>
                   <div className="flex items-center gap-2">
                     <Users className="h-5 w-5 text-amber-600" />
                     <span className="text-sm text-amber-700">
@@ -171,18 +164,42 @@ export default function Home() {
 
                 <div className="space-y-4 text-amber-800 leading-relaxed">
                   <p className="text-lg">
-                    Teaching isn&apos;t just my profession—it&apos;s my calling.
-                    For the past 15 years, I&apos;ve been blessed to guide young
-                    learners on their educational journey, and each day brings
-                    new joy as I watch their confidence blossom.
+                    Hi! I'm a passionate and patient tutor who loves helping
+                    students build a strong foundation in{" "}
+                    <span className="font-bold">Maths and Science</span>
+                    —subjects I believe can be fun, empowering, and deeply
+                    rewarding when understood properly. I specialise in tutoring
+                    students up to <span className="font-bold">Year 7</span>,
+                    guiding them through key concepts in a way that sticks not
+                    just for exams, but for life.
                   </p>
                   <p className="text-lg">
-                    My approach is simple: every child is unique, brilliant, and
-                    deserving of an education that honors their individual
-                    learning style. Whether we&apos;re exploring the wonders of
-                    mathematics, diving into exciting scientific discoveries, or
-                    crafting beautiful stories together, I believe learning
-                    should feel nurturing and empowering.
+                    My approach goes beyond memorising formulas or facts. I
+                    focus on making sure every student truly{" "}
+                    <span className="font-bold">
+                      understands the "why" and "how"
+                    </span>{" "}
+                    behind each topic. Whether it's fractions, forces, or the
+                    scientific method, I work to build confidence, spark
+                    curiosity, and ensure long-term retention.
+                  </p>
+                  <p className="text-lg">
+                    Every student learns differently, so I adapt my teaching
+                    style to meet their needs—breaking down complex ideas into
+                    clear, relatable steps. My goal is always to help students
+                    feel proud of what they've learned and prepared for whatever
+                    comes next, academically and beyond.
+                  </p>
+                  <p className="text-lg">
+                    In addition to Maths and Science, I also offer specialised{" "}
+                    <span className="font-bold">Phonics tutoring</span> to help
+                    young learners develop strong reading and spelling skills. I
+                    understand how important it is for children to build a solid
+                    foundation in phonics early on, which sets them up for
+                    success in all areas of literacy. Through engaging, tailored
+                    activities, I support each child in recognising sounds,
+                    blending words, and improving their fluency — making reading
+                    enjoyable and empowering.
                   </p>
                 </div>
               </div>
@@ -209,11 +226,15 @@ export default function Home() {
               <div className="w-20 h-0.5 bg-amber-600"></div>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-3 relative max-w-6xl mx-auto">
+            <div className="flex flex-col md:flex-row gap-8 relative max-w-6xl mx-auto">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="bg-white border-2 border-amber-100 p-8 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 relative"
+                  className={`
+                    bg-white border-2 border-amber-100 p-8 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 relative
+                    flex-1
+                    ${index === 1 ? "md:flex-[3]" : "md:flex-[1]"}
+                  `}
                 >
                   <div className="flex items-center gap-1 mb-6">
                     {[...Array(5)].map((_, i) => (
@@ -429,13 +450,6 @@ export default function Home() {
                           fun
                         </span>
                       </div>
-                      <div className="flex items-start gap-3">
-                        <FileText className="h-5 w-5 text-amber-600 mt-0.5" />
-                        <span>
-                          <strong>Recordings available</strong> for review and
-                          reinforcement
-                        </span>
-                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -532,21 +546,15 @@ export default function Home() {
 
 const testimonials = [
   {
-    name: "Sarah Thompson",
-    relation: "Parent of 3rd grader",
-    content:
-      "Shivani has been a blessing for our family. My son struggled with math anxiety, but after just a few sessions, he's approaching problems with confidence. Her patience and teaching methods are exceptional.",
-  },
-  {
-    name: "Michael Rodriguez",
+    name: "Saif Ali",
     relation: "Parent of 6th grader",
     content:
-      "Our daughter's science grades have improved dramatically since working with Shivani. She makes complex concepts easy to understand and keeps learning fun and engaging.",
+      "Ms. Shivani taught my son Marwan mathematics in year 6 and he showed a lot of improvement in his understanding as well as his exam results. She is very patient and kind hearted, and is very good with kids.",
   },
   {
-    name: "Vedant Khanna",
-    relation: "Son of Shivani Khanna",
+    name: "Nada Harb",
+    relation: "Parent of Miral Harb, 6th grader",
     content:
-      "I have been a student of Shivani Khanna for 18 years. She has been the best teacher I have ever had because no one else cares as much about her students as she does. I am now studying Math at Stanford University.",
+      "We have been working with Ms. Shivani for a year, and we can confidently say she's an excellent tutor who would go above and beyond in finding the most effective way of delivering studying material. Ms. Shivani is highly competent and knows how to assess kids' receiving abilities, then would structure the lessons to match students learning techniques. Besides the usual subjects, Ms. Shivani looks for potential and areas where kids can excel, and would highlight to parents. Our daughter has significantly improved from not liking math to being recognizable by her class teacher as an excellent example. Well done Ms. Shivani, and thank you for your diligence and care!",
   },
 ];
