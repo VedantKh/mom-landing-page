@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,8 +17,78 @@ import {
   Video,
   FileText,
 } from "lucide-react";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+
+const testimonials = [
+  {
+    name: "Saif Ali",
+    relation: "Parent of 6th grader",
+    content:
+      "Ms. Shivani taught my son Marwan mathematics in year 6 and he showed a lot of improvement in his understanding as well as his exam results. She is very patient and kind hearted, and is very good with kids.",
+  },
+  {
+    name: "Nada Harb",
+    relation: "Parent of Miral Harb, 6th grader",
+    content:
+      "We have been working with Ms. Shivani for a year, and we can confidently say she's an excellent tutor who would go above and beyond in finding the most effective way of delivering studying material. Ms. Shivani is highly competent and knows how to assess kids' receiving abilities, then would structure the lessons to match students learning techniques. Besides the usual subjects, Ms. Shivani looks for potential and areas where kids can excel, and would highlight to parents. Our daughter has significantly improved from not liking math to being recognizable by her class teacher as an excellent example. Well done Ms. Shivani, and thank you for your diligence and care!",
+  },
+  {
+    name: "Vedant Khanna",
+    relation: "Son of Shivani Khanna",
+    content:
+      "I have been a student of Shivani Khanna for 18 years. She has been the best teacher I have ever had because no one else cares as much about her students as she does. I am now studying Math at Stanford University.",
+  },
+];
 
 export default function Home() {
+  const controls = useAnimation();
+  const BASE_WIDTH = 340; // Corresponds to min-w-[340px]
+  const GAP = 32; // Corresponds to gap-8
+
+  // We duplicate the testimonials to create a seamless loop
+  const duplicatedTestimonials = [...testimonials, ...testimonials];
+
+  const totalWidth = testimonials.reduce((acc, _, index) => {
+    const cardWidth = index === 1 ? BASE_WIDTH * 3 : BASE_WIDTH;
+    return acc + cardWidth + GAP;
+  }, 0);
+
+  const animation = {
+    x: -totalWidth,
+    transition: {
+      ease: "linear" as const,
+      duration: 50, // Slower duration for a smoother scroll
+      repeat: Infinity,
+      repeatType: "loop" as const,
+    },
+  };
+
+  useEffect(() => {
+    controls.start(animation);
+  }, [controls, animation]);
+
+  // Handle page visibility changes
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        controls.stop();
+      } else {
+        controls.start(animation);
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [controls, animation]);
+
+  const handleHoverStart = () => controls.stop();
+  const handleHoverEnd = () => {
+    controls.start(animation);
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-gradient-to-b from-amber-50 via-gray-50 to-amber-50">
       <header className="sticky top-0 z-40 border-b border-amber-200 bg-gray-50/35 backdrop-blur supports-[backdrop-filter]:bg-gray-50/35">
@@ -208,41 +279,58 @@ export default function Home() {
               </h2>
               <div className="w-20 h-0.5 bg-amber-600"></div>
             </div>
+            <div
+              className="relative max-w-full mx-auto overflow-hidden"
+              onMouseEnter={handleHoverStart}
+              onMouseLeave={handleHoverEnd}
+            >
+              <motion.div
+                className="flex gap-8 items-stretch"
+                animate={controls}
+              >
+                {duplicatedTestimonials.map((testimonial, index) => {
+                  const isWideCard = index % testimonials.length === 1;
+                  const cardWidth = isWideCard ? BASE_WIDTH * 3 : BASE_WIDTH;
 
-            <div className="grid gap-8 md:grid-cols-3 relative max-w-6xl mx-auto">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-white border-2 border-amber-100 p-8 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 relative"
-                >
-                  <div className="flex items-center gap-1 mb-6">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="h-5 w-5 fill-amber-400 text-amber-400"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-amber-800 mb-8 italic text-lg leading-relaxed">
-                    &quot;{testimonial.content}&quot;
-                  </p>
-                  <div className="flex items-center gap-4 mt-auto border-t border-amber-200 pt-6">
-                    <div className="rounded-full bg-amber-200 h-12 w-12 flex items-center justify-center">
-                      <span className="font-semibold text-amber-800 text-lg">
-                        {testimonial.name.charAt(0)}
-                      </span>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-amber-900">
-                        {testimonial.name}
+                  return (
+                    <div
+                      key={index}
+                      className="bg-white border-2 border-amber-100 p-8 rounded-3xl shadow-sm relative flex flex-col"
+                      style={{
+                        flex: `0 0 ${cardWidth}px`,
+                        width: `${cardWidth}px`,
+                      }}
+                    >
+                      <div className="flex items-center gap-1 mb-6">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="h-5 w-5 fill-amber-400 text-amber-400"
+                          />
+                        ))}
+                      </div>
+                      <p className="text-amber-800 mb-8 italic text-lg leading-relaxed">
+                        &quot;{testimonial.content}&quot;
                       </p>
-                      <p className="text-sm text-amber-600">
-                        {testimonial.relation}
-                      </p>
+                      <div className="flex items-center gap-4 mt-auto border-t border-amber-200 pt-6">
+                        <div className="rounded-full bg-amber-200 h-12 w-12 flex items-center justify-center">
+                          <span className="font-semibold text-amber-800 text-lg">
+                            {testimonial.name.charAt(0)}
+                          </span>
+                        </div>
+                        <div>
+                          <p className="font-semibold text-amber-900">
+                            {testimonial.name}
+                          </p>
+                          <p className="text-sm text-amber-600">
+                            {testimonial.relation}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  );
+                })}
+              </motion.div>
             </div>
           </div>
         </section>
@@ -529,24 +617,3 @@ export default function Home() {
     </div>
   );
 }
-
-const testimonials = [
-  {
-    name: "Sarah Thompson",
-    relation: "Parent of 3rd grader",
-    content:
-      "Shivani has been a blessing for our family. My son struggled with math anxiety, but after just a few sessions, he's approaching problems with confidence. Her patience and teaching methods are exceptional.",
-  },
-  {
-    name: "Michael Rodriguez",
-    relation: "Parent of 6th grader",
-    content:
-      "Our daughter's science grades have improved dramatically since working with Shivani. She makes complex concepts easy to understand and keeps learning fun and engaging.",
-  },
-  {
-    name: "Vedant Khanna",
-    relation: "Son of Shivani Khanna",
-    content:
-      "I have been a student of Shivani Khanna for 18 years. She has been the best teacher I have ever had because no one else cares as much about her students as she does. I am now studying Math at Stanford University.",
-  },
-];
