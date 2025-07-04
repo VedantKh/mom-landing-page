@@ -15,9 +15,11 @@ import {
   CheckCircle,
   Clock,
   Video,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useMemo } from "react";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { useEffect, useMemo, useState } from "react";
 
 const testimonials = [
   {
@@ -28,19 +30,33 @@ const testimonials = [
   },
   {
     name: "Nada Harb",
-    relation: "Parent of Miral Harb, 6th grader",
+    relation: "Parent of Miral Harb, 5th grader",
     content:
-      "We have been working with Ms. Shivani for a year, and we can confidently say she&apos;s an excellent tutor who would go above and beyond in finding the most effective way of delivering studying material. Ms. Shivani is highly competent and knows how to assess kids' receiving abilities, then would structure the lessons to match students learning techniques. Besides the usual subjects, Ms. Shivani looks for potential and areas where kids can excel, and would highlight to parents. Our daughter has significantly improved from not liking math to being recognizable by her class teacher as an excellent example. Well done Ms. Shivani, and thank you for your diligence and care!",
+      "We have been working with Ms Shivani for a year and can confidently say she's an excellent tutor who goes above and beyond in delivering studying material. She assesses kids' abilities, structures lessons to match their learning techniques, and highlights areas where they can excel. Our daughter has improved from not liking math to being recognised by her class teacher as an excellent example.",
   },
   {
-    name: "Vedant Khanna",
-    relation: "Son of Shivani Khanna",
+    name: "Mohammad Umar",
+    relation: "7th grader",
     content:
-      "I have been a student of Shivani Khanna for 18 years. She has been the best teacher I have ever had because no one else cares as much about her students as she does. I am now studying Math at Stanford University.",
+      "Ms. Shivani has been the best teacher I have ever had because no one else cares as much about her students as she does. I've performed my best in all my exams, especially in Maths and Science.",
   },
 ];
 
 export default function Home() {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) =>
+      prev === testimonials.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonial((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
+  };
+
   const controls = useAnimation();
   const BASE_WIDTH = 340; // Corresponds to min-w-[340px]
   const GAP = 32; // Corresponds to gap-8
@@ -51,7 +67,7 @@ export default function Home() {
   const totalWidth = useMemo(
     () =>
       testimonials.reduce((acc, _, index) => {
-        const cardWidth = index === 1 ? BASE_WIDTH * 3 : BASE_WIDTH;
+        const cardWidth = index === 1 ? BASE_WIDTH * 1.7 : BASE_WIDTH;
         return acc + cardWidth + GAP;
       }, 0),
     []
@@ -62,7 +78,7 @@ export default function Home() {
       x: -totalWidth,
       transition: {
         ease: "linear" as const,
-        duration: 50, // Slower duration for a smoother scroll
+        duration: 30, // Slower duration for a smoother scroll
         repeat: Infinity,
         repeatType: "loop" as const,
       },
@@ -105,10 +121,7 @@ export default function Home() {
                 className="text-2xl font-light italic text-amber-700"
                 style={{ fontFamily: "serif" }}
               >
-                Shivani&apos;s
-              </span>
-              <span className="text-xl font-bold tracking-wide text-amber-900 -mt-1">
-                TUTORING
+                Edvance
               </span>
               <div className="w-16 h-px bg-amber-600 mt-1"></div>
             </div>
@@ -295,8 +308,9 @@ export default function Home() {
               </h2>
               <div className="w-20 h-0.5 bg-amber-600"></div>
             </div>
+            {/* Desktop: Auto-scrolling testimonials */}
             <div
-              className="relative max-w-full mx-auto overflow-hidden"
+              className="relative max-w-full mx-auto overflow-hidden hidden md:block"
               onMouseEnter={handleHoverStart}
               onMouseLeave={handleHoverEnd}
             >
@@ -306,7 +320,7 @@ export default function Home() {
               >
                 {duplicatedTestimonials.map((testimonial, index) => {
                   const isWideCard = index % testimonials.length === 1;
-                  const cardWidth = isWideCard ? BASE_WIDTH * 3 : BASE_WIDTH;
+                  const cardWidth = isWideCard ? BASE_WIDTH * 1.7 : BASE_WIDTH;
 
                   return (
                     <div
@@ -348,6 +362,69 @@ export default function Home() {
                 })}
               </motion.div>
             </div>
+            {/* Mobile: Click-through testimonials */}
+            <div
+              className={`relative md:hidden max-w-lg mx-auto transition-all duration-300 ease-in-out ${
+                currentTestimonial === 1 ? "h-[620px]" : "h-[450px]"
+              }`}
+            >
+              <div className="relative h-full overflow-hidden">
+                <AnimatePresence initial={false}>
+                  <motion.div
+                    key={currentTestimonial}
+                    initial={{ opacity: 0, x: 300 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -300 }}
+                    transition={{ type: "spring", stiffness: 100, damping: 20 }}
+                    className="w-full h-full"
+                  >
+                    <div className="bg-white border-2 border-amber-100 p-8 rounded-3xl shadow-sm relative flex flex-col h-full">
+                      <div className="flex items-center gap-1 mb-6">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="h-5 w-5 fill-amber-400 text-amber-400"
+                          />
+                        ))}
+                      </div>
+                      <p className="text-amber-800 mb-8 italic text-lg leading-relaxed">
+                        &quot;{testimonials[currentTestimonial].content}&quot;
+                      </p>
+                      <div className="flex items-center gap-4 mt-auto border-t border-amber-200 pt-6">
+                        <div className="rounded-full bg-amber-200 h-12 w-12 flex items-center justify-center">
+                          <span className="font-semibold text-amber-800 text-lg">
+                            {testimonials[currentTestimonial].name.charAt(0)}
+                          </span>
+                        </div>
+                        <div>
+                          <p className="font-semibold text-amber-900">
+                            {testimonials[currentTestimonial].name}
+                          </p>
+                          <p className="text-sm text-amber-600">
+                            {testimonials[currentTestimonial].relation}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              <button
+                onClick={prevTestimonial}
+                className="absolute top-1/2 -left-3 transform -translate-y-1/2 bg-white/60 backdrop-blur-sm rounded-full p-2 z-10 shadow-md hover:bg-white transition-colors"
+                aria-label="Previous testimonial"
+              >
+                <ChevronLeft className="h-6 w-6 text-amber-800" />
+              </button>
+              <button
+                onClick={nextTestimonial}
+                className="absolute top-1/2 -right-3 transform -translate-y-1/2 bg-white/60 backdrop-blur-sm rounded-full p-2 z-10 shadow-md hover:bg-white transition-colors"
+                aria-label="Next testimonial"
+              >
+                <ChevronRight className="h-6 w-6 text-amber-800" />
+              </button>
+            </div>
           </div>
         </section>
 
@@ -386,15 +463,15 @@ export default function Home() {
                   </h3>
                   <ul className="space-y-3 text-amber-700">
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
-                      <span>Visual storytelling with numbers</span>
+                      <CheckCircle className="h-6 w-6 flex-shrink-0 text-amber-600" />
+                      <span>Personalised learning through smart portal</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
-                      <span>Real-world connections that spark curiosity</span>
+                      <CheckCircle className="h-6 w-6 flex-shrink-0 text-amber-600" />
+                      <span>Conquer one concept at a time</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
+                      <CheckCircle className="h-6 w-6 flex-shrink-0 text-amber-600" />
                       <span>Confidence-building through gentle challenge</span>
                     </li>
                   </ul>
@@ -411,15 +488,11 @@ export default function Home() {
                   </h3>
                   <ul className="space-y-3 text-amber-700">
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
-                      <span>Hands-on experiments that amaze</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
+                      <CheckCircle className="h-6 w-6 flex-shrink-0 text-amber-600" />
                       <span>Nature-connected learning</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
+                      <CheckCircle className="h-6 w-6 flex-shrink-0 text-amber-600" />
                       <span>
                         Questions that lead to &quot;aha!&quot; moments
                       </span>
@@ -438,15 +511,15 @@ export default function Home() {
                   </h3>
                   <ul className="space-y-3 text-amber-700">
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
+                      <CheckCircle className="h-6 w-6 flex-shrink-0 text-amber-600" />
                       <span>Stories that come alive</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
+                      <CheckCircle className="h-6 w-6 flex-shrink-0 text-amber-600" />
                       <span>Writing that flows from the heart</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-amber-600 mt-0.5" />
+                      <CheckCircle className="h-6 w-6 flex-shrink-0 text-amber-600" />
                       <span>
                         Reading adventures we&apos;ll treasure together
                       </span>
@@ -489,7 +562,7 @@ export default function Home() {
                     </h4>
                     <div className="space-y-3 text-amber-700">
                       <div className="flex items-start gap-3">
-                        <Heart className="h-5 w-5 text-amber-600 mt-0.5 fill-amber-600" />
+                        <Heart className="h-6 w-6 text-amber-600 mt-0.5 fill-amber-600" />
                         <span>
                           <strong>Personal connection</strong> in your
                           child&apos;s comfort zone
@@ -598,9 +671,8 @@ export default function Home() {
                 className="text-lg italic text-amber-700"
                 style={{ fontFamily: "serif" }}
               >
-                Shivani&apos;s
+                Edvance
               </span>
-              <span className="text-sm font-bold text-amber-900">TUTORING</span>
             </div>
             <p className="text-center text-sm text-amber-700 md:text-left">
               © {new Date().getFullYear()} • Made with love for every
