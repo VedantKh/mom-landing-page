@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shivani Tutoring | K-8 Private Tutor in Abu Dhabi",
+  title: "Edvance | K-8 Private Tutor in Abu Dhabi",
   description:
     "15-year experienced tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
   keywords: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://shivanitutoring.com/",
-    title: "Shivani Tutoring | K-8 Private Tutor in Abu Dhabi",
+    title: "Edvance | K-8 Private Tutor in Abu Dhabi",
     description:
       "15-year experienced tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
     siteName: "Shivani's Tutoring",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shivani Tutoring | K-8 Private Tutor in Abu Dhabi",
+    title: "Edvance | K-8 Private Tutor in Abu Dhabi",
     description:
       "15-year experienced tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
     images: ["https://shivanitutoring.com/assets/hero.png"],
@@ -85,7 +85,7 @@ const structuredData = {
       "@type": "LocalBusiness",
       "@id": "https://shivanitutoring.com/#business",
       name: "Shivani's Tutoring",
-      alternateName: "Shivani Tutoring",
+      alternateName: "Edvance",
       description:
         "Professional K-8 tutoring services in Abu Dhabi offering personalized Math, Science, and English coaching with 15+ years of experience.",
       url: "https://shivanitutoring.com/",
