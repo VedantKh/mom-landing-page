@@ -44,19 +44,19 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://shivanitutoring.com/",
+    canonical: "https://edvancetutor.com/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://shivanitutoring.com/",
+    url: "https://edvancetutor.com/",
     title: "Edvance | K-8 Private Tutor in Abu Dhabi",
     description:
       "15-year experienced tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
     siteName: "Shivani's Tutoring",
     images: [
       {
-        url: "https://shivanitutoring.com/assets/hero.png",
+        url: "https://edvancetutor.com/assets/hero.png",
         width: 1200,
         height: 630,
         alt: "Shivani Khanna - Professional K-8 Tutor in Abu Dhabi offering Math, Science & English coaching",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: "Edvance | K-8 Private Tutor in Abu Dhabi",
     description:
       "15-year experienced tutor and mom offering Math, Science & English coaching for elementary and middle school students in Abu Dhabi. Book a free consultation.",
-    images: ["https://shivanitutoring.com/assets/hero.png"],
+    images: ["https://edvancetutor.com/assets/hero.png"],
     creator: "@shivanitutoring",
   },
   verification: {
@@ -83,14 +83,14 @@ const structuredData = {
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "https://shivanitutoring.com/#business",
+      "@id": "https://edvancetutor.com/#business",
       name: "Shivani's Tutoring",
       alternateName: "Edvance",
       description:
         "Professional K-8 tutoring services in Abu Dhabi offering personalized Math, Science, and English coaching with 15+ years of experience.",
-      url: "https://shivanitutoring.com/",
+      url: "https://edvancetutor.com/",
       telephone: "+971-50-596-4988",
-      email: "hello@shivanitutoring.com",
+      email: "hello@edvancetutor.com",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Abu Dhabi",
@@ -103,7 +103,7 @@ const structuredData = {
       },
       openingHours: "Mo-Su 09:00-20:00",
       priceRange: "$$",
-      image: "https://shivanitutoring.com/assets/hero.png",
+      image: "https://edvancetutor.com/assets/hero.png",
       founder: {
         "@type": "Person",
         name: "Shivani Khanna",
@@ -120,13 +120,13 @@ const structuredData = {
     },
     {
       "@type": "Service",
-      "@id": "https://shivanitutoring.com/#service",
+      "@id": "https://edvancetutor.com/#service",
       serviceType: "Educational Tutoring",
       name: "K-8 Private Tutoring Services",
       description:
         "Personalized tutoring in Mathematics, Science, and English for elementary and middle school students (Grades K-8).",
       provider: {
-        "@id": "https://shivanitutoring.com/#business",
+        "@id": "https://edvancetutor.com/#business",
       },
       areaServed: {
         "@type": "City",
@@ -168,27 +168,27 @@ const structuredData = {
     },
     {
       "@type": "Person",
-      "@id": "https://shivanitutoring.com/#person",
+      "@id": "https://edvancetutor.com/#person",
       name: "Shivani Khanna",
       jobTitle: "Professional K-8 Tutor & Educator",
       description:
         "15+ years experienced educator specializing in personalized learning for elementary and middle school students.",
-      url: "https://shivanitutoring.com/",
-      image: "https://shivanitutoring.com/assets/about.png",
+      url: "https://edvancetutor.com/",
+      image: "https://edvancetutor.com/assets/about.png",
       telephone: "+971-50-596-4988",
-      email: "hello@shivanitutoring.com",
+      email: "hello@edvancetutor.com",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Abu Dhabi",
         addressCountry: "AE",
       },
       worksFor: {
-        "@id": "https://shivanitutoring.com/#business",
+        "@id": "https://edvancetutor.com/#business",
       },
     },
     {
       "@type": "Review",
-      "@id": "https://shivanitutoring.com/#review1",
+      "@id": "https://edvancetutor.com/#review1",
       reviewBody:
         "Shivani has been a blessing for our family. My son struggled with math anxiety, but after just a few sessions, he's approaching problems with confidence. Her patience and teaching methods are exceptional.",
       reviewRating: {
@@ -201,12 +201,12 @@ const structuredData = {
         name: "Sarah Thompson",
       },
       itemReviewed: {
-        "@id": "https://shivanitutoring.com/#business",
+        "@id": "https://edvancetutor.com/#business",
       },
     },
     {
       "@type": "Review",
-      "@id": "https://shivanitutoring.com/#review2",
+      "@id": "https://edvancetutor.com/#review2",
       reviewBody:
         "Our daughter's science grades have improved dramatically since working with Shivani. She makes complex concepts easy to understand and keeps learning fun and engaging.",
       reviewRating: {
@@ -219,12 +219,12 @@ const structuredData = {
         name: "Michael Rodriguez",
       },
       itemReviewed: {
-        "@id": "https://shivanitutoring.com/#business",
+        "@id": "https://edvancetutor.com/#business",
       },
     },
     {
       "@type": "Review",
-      "@id": "https://shivanitutoring.com/#review3",
+      "@id": "https://edvancetutor.com/#review3",
       reviewBody:
         "I have been a student of Shivani Khanna for 18 years. She has been the best teacher I have ever had because no one else cares as much about her students as she does. I am now studying Math at Stanford University.",
       reviewRating: {
@@ -237,12 +237,12 @@ const structuredData = {
         name: "Vedant Khanna",
       },
       itemReviewed: {
-        "@id": "https://shivanitutoring.com/#business",
+        "@id": "https://edvancetutor.com/#business",
       },
     },
     {
       "@type": "FAQPage",
-      "@id": "https://shivanitutoring.com/#faq",
+      "@id": "https://edvancetutor.com/#faq",
       mainEntity: [
         {
           "@type": "Question",
@@ -273,7 +273,7 @@ const structuredData = {
           name: "How can I schedule a consultation?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "You can call me at (+971) 50 596 4988 or email hello@shivanitutoring.com to schedule a free consultation. I'd love to meet you and your child to discuss their learning journey.",
+            text: "You can call me at (+971) 50 596 4988 or email hello@edvancetutor.com to schedule a free consultation. I'd love to meet you and your child to discuss their learning journey.",
           },
         },
       ],

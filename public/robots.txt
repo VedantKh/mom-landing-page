@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://shivanitutoring.com/sitemap.xml
+Sitemap: https://edvancetutor.com/sitemap.xml
 
 # Optimize crawl budget - block unnecessary files
 Disallow: /_next/static/
