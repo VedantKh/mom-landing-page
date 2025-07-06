@@ -259,7 +259,7 @@ export default function Home() {
                     <span className="font-bold">Maths and Science</span>
                     —subjects I believe can be fun, empowering, and deeply
                     rewarding when understood properly. I specialise in tutoring
-                    students up to <span className="font-bold">Year 7</span>,
+                    students up to <span className="font-bold">Year 8</span>,
                     guiding them through key concepts in a way that sticks not
                     just for exams, but for life.
                   </p>
